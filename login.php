@@ -1,4 +1,28 @@
 <?php include('includes/head.php'); ?>
+<?php include('function/function.php'); ?>
+<?php
+$username = "";
+
+$errors = array('username' => '', 'password' => '');
+
+
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $hashpass = md5($password);
+
+    if (empty($username)) {
+        $errors['username'] = 'Username cannot be empty';
+    }
+    if (empty($password)) {
+        $errors['password'] = 'Password cannot be empty';
+    }
+    if ($username != "" && $hashpass != "") {
+        $call = login($username, $hashpass);
+    }
+}
+
+?>
 
 <body>
     <?php include('includes/header.php'); ?>
@@ -14,35 +38,18 @@
     <div id="main-reg">
         <div id="sub-reg">
             <!--id change-->
+            <?php if (isset($_SESSION['ERROR'])) {
+                echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Error!</strong> ' . $_SESSION['ERROR'] . '
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>';
+            }
 
-
-
-
-            <script language=javascript>
-                function checkform() {
-                    if (document.mainform.username.value == '') {
-                        alert("Please type your username!");
-                        document.mainform.username.focus();
-                        return false;
-                    }
-                    if (document.mainform.password.value == '') {
-                        alert("Please type your password!");
-                        document.mainform.password.focus();
-                        return false;
-                    }
-                    return true;
-                }
-            </script>
-
-
-
-
-            <form method=post name=mainform onsubmit="return checkform()"><input type="hidden" name="form_id" value="16237000689138"><input type="hidden" name="form_token" value="aae3920a0d0f8060f55e0c5f8b631190">
-                <input type=hidden name=a value='do_login'>
-                <input type=hidden name=follow value=''>
-                <input type=hidden name=follow_id value=''>
-
-
+            unset($_SESSION['ERROR']);
+            ?>
+            <form method=post>
                 <div class="reg-head">
                 </div>
                 <div class="reghead-text">
@@ -56,6 +63,8 @@
                             </div>
                             <div class="info-type">
                                 <input type="text" name=username value=''>
+                                <span style="color: red"><?php echo $errors['username']; ?></span>
+
                             </div>
                         </div>
                     </div>
@@ -66,18 +75,15 @@
                             </div>
                             <div class="info-type">
                                 <input type="password" name=password value=''>
+                                <span style="color: red"><?php echo $errors['password']; ?></span>
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
 
                 <div class="login-forgot">
                     <div class="loginnow">
-                        <input type="submit" value="LOG IN NOW">
+                        <input type="submit" name="login" value="LOG IN NOW">
                     </div>
                     <div class="forgot">
                         <a href="forgot.php">You Forgot Password ? <span>Click Here</span></a>

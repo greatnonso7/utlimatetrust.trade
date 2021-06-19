@@ -20,15 +20,15 @@
 
 
                 <div class="dc_toggle style2 dc_hide">
-                    <div class="ho"><a href="" class="dc_toggle_link">How can I invest with Fidelity Trade Ltd ?</a></div>
-                    <div class="dc_toggle_box">To make a investment you must first become a member of Fidelity Trade Ltd . Once
+                    <div class="ho"><a href="" class="dc_toggle_link">How can I invest with Ultimate trust trade ?</a></div>
+                    <div class="dc_toggle_box">To make a investment you must first become a member of Ultimate trust trade . Once
                         you are signed up, you can make your first deposit. All deposits must be made
                         through the Members Area. You can login using the member username and password
                         you receive when signup. </div>
                 </div>
 
                 <div class="dc_toggle style2 dc_hide">
-                    <div class="ho"><a href="" class="dc_toggle_link">I wish to invest with Fidelity Trade Ltd but I don't have an any ecurrency account. What
+                    <div class="ho"><a href="" class="dc_toggle_link">I wish to invest with Ultimate trust trade but I don't have an any ecurrency account. What
                             should I do?</a></div>
                     <div class="dc_toggle_box">
 
@@ -40,8 +40,8 @@
                 </div>
 
                 <div class="dc_toggle style2 dc_hide">
-                    <div class="ho"><a href="" class="dc_toggle_link">How do I open my Fidelity Trade Ltd Account?</a></div>
-                    <div class="dc_toggle_box">It's quite easy and convenient. Follow this <a href="?a=signup">link</a>, fill
+                    <div class="ho"><a href="" class="dc_toggle_link">How do I open my Ultimate trust trade Account?</a></div>
+                    <div class="dc_toggle_box">It's quite easy and convenient. Follow this <a href="register.php">link</a>, fill
                         in the registration form and then press "Register". </div>
                 </div>
 
@@ -70,7 +70,7 @@
 
                 <div class="dc_toggle style2 dc_hide">
                     <div class="ho"><a href="" class="dc_toggle_link">How can I change my e-mail address or password?</a></div>
-                    <div class="dc_toggle_box"> Log into your Fidelity Trade Ltd account and click on the "Account Information". You
+                    <div class="dc_toggle_box"> Log into your Ultimate trust trade account and click on the "Account Information". You
                         can change your e-mail address and password there. </div>
                 </div>
 
@@ -78,21 +78,21 @@
 
                 <div class="dc_toggle style2 dc_hide">
                     <div class="ho"><a href="" class="dc_toggle_link">What if I can't log into my account because I forgot my password?</a></div>
-                    <div class="dc_toggle_box">ick <a href="?a=forgot_password">forgot password</a> link, type your username
+                    <div class="dc_toggle_box">ick <a href="forgot.php">forgot password</a> link, type your username
                         or e-mail and you'll receive your account information. </div>
                 </div>
 
 
                 <div class="dc_toggle style2 dc_hide">
                     <div class="ho"><a href="" class="dc_toggle_link">Does a daily profit paid directly to my currency account?</a></div>
-                    <div class="dc_toggle_box">No, profits are gathered on your Fidelity Trade Ltd account and you can withdraw them
+                    <div class="dc_toggle_box">No, profits are gathered on your Ultimate trust trade account and you can withdraw them
                         anytime. </div>
                 </div>
 
 
                 <div class="dc_toggle style2 dc_hide">
                     <div class="ho"><a href="" class="dc_toggle_link">How do you calculate the interest on my account?</a></div>
-                    <div class="dc_toggle_box">Depending on each plan. Interest on your Fidelity Trade Ltd account is acquired
+                    <div class="dc_toggle_box">Depending on each plan. Interest on your Ultimate trust trade account is acquired
                         Daily, Weekly, Bi-Weekly, Monthly and Yearly and credited to your available
                         balance at the end of each day.</div>
                 </div>
@@ -100,14 +100,14 @@
 
                 <div class="dc_toggle style2 dc_hide">
                     <div class="ho"><a href="" class="dc_toggle_link">Can I do a direct deposit from my account balance?</a></div>
-                    <div class="dc_toggle_box"> Yes! To make a deposit from your Fidelity Trade Ltd account balance. Simply login
+                    <div class="dc_toggle_box"> Yes! To make a deposit from your Ultimate trust trade account balance. Simply login
                         into your members account and click on Make Deposit ans select the Deposit from
                         Account Balance Radio button. </div>
                 </div>
 
 
                 <div class="dc_toggle style2 dc_hide">
-                    <div class="ho"><a href="" class="dc_toggle_link">Can I make an additional deposit to Fidelity Trade Ltd account once it has
+                    <div class="ho"><a href="" class="dc_toggle_link">Can I make an additional deposit to Ultimate trust trade account once it has
                             been opened?</a></div>
                     <div class="dc_toggle_box"> Yes, you can but all transactions are handled separately. </div>
                 </div>
@@ -154,7 +154,7 @@
 
                 <div class="dc_toggle style2 dc_hide">
                     <div class="ho"><a href="" class="dc_toggle_link">How can I make a spend?</a></div>
-                    <div class="dc_toggle_box">To make a spend you must first become a member of Fidelity Trade Ltd . Once you
+                    <div class="dc_toggle_box">To make a spend you must first become a member of Ultimate trust trade . Once you
                         are signed up, you can make your first spend. All spends must be made through
                         the Member Area. You can login using the member username and password you received
                         when signup. </div>
@@ -162,7 +162,7 @@
 
                 <div class="dc_toggle style2 dc_hide">
                     <div class="ho"><a href="" class="dc_toggle_link">Who manages the funds?</a></div>
-                    <div class="dc_toggle_box">These funds are managed by a team of Fidelity Trade Ltd investment experts. </div>
+                    <div class="dc_toggle_box">These funds are managed by a team of Ultimate trust trade investment experts. </div>
                 </div>
 
 

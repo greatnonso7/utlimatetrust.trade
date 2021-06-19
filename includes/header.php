@@ -3,10 +3,10 @@
   <div id="sub-header">
     <div class="ls-left">
       <div class="lslogin">
-        <a href="/login.php" class="a-link"><i class="fa fa-key" aria-hidden="true"></i> Log In</a>
+        <a href="login.php" class="a-link"><i class="fa fa-key" aria-hidden="true"></i> Log In</a>
       </div>
       <div class="lssignup">
-        <a href="/register.php" class="a-link"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+        <a href="register.php" class="a-link"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
       </div>
     </div>
     <div class="addby">
@@ -41,25 +41,32 @@
 
 </div>
 <!--end header-->
-<div id="main-menu">
+<div id="main-menu" class="container">
   <!--start menu-->
 
+  <?php
+  function PageName()
+  {
+    return substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
+  }
+
+  $current_page = PageName();
+
+  ?>
   <div class="logo">
     <a href="index.php"><img src="images/logo.png" alt="logo" width="258" height="60"></a>
   </div>
   <div class="menu">
     <nav id="nav-1">
 
-      <a class="link-1 hoveract" href="index.php">Home</a>
-      <a class="link-1" href="about.php">About Us</a>
+      <a class="link-1 <?php echo $current_page == 'index.php' ? 'hoveract' : NULL ?>" href="index.php">Home</a>
+      <a class="link-1 <?php echo $current_page == 'about.php' ? 'hoveract' : NULL ?>" href="about.php">About Us</a>
 
 
-      <a class="link-1" href="faq.php">F.a.q</a>
-      <a class="link-1" href="rules.php">Terms & Conditions</a>
+      <a class="link-1 <?php echo $current_page == 'faq.php' ? 'hoveract' : NULL ?>" href="faq.php">F.a.q</a>
+      <a class="link-1 <?php echo $current_page == 'rules.php' ? 'hoveract' : NULL ?>" href="rules.php">Terms & Conditions</a>
 
-
-      <a class="link-1" href="support.php">Support</a>
+      <a class="link-1 <?php echo $current_page == 'support.php' ? 'hoveract' : NULL ?>" href="support.php">Support</a>
     </nav>
   </div>
-</div>
 </div>
