@@ -132,7 +132,7 @@ function login($user, $pass)
     if ($getinf02->password === $pass) {
       $_SESSION['user'] = $user;
       echo '<script>
-            window.location.href = "dashboard.html"
+            window.location.href = "dashboard.php"
           </script>';
     } else {
       $_SESSION['ERROR'] = 'Email or Password is not correct';

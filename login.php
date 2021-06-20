@@ -1,32 +1,30 @@
 <?php include('includes/head.php'); ?>
-<?php include('function/function.php'); ?>
-<?php
-$username = "";
-
-$errors = array('username' => '', 'password' => '');
-
-
-if (isset($_POST['login'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $hashpass = md5($password);
-
-    if (empty($username)) {
-        $errors['username'] = 'Username cannot be empty';
-    }
-    if (empty($password)) {
-        $errors['password'] = 'Password cannot be empty';
-    }
-    if ($username != "" && $hashpass != "") {
-        $call = login($username, $hashpass);
-    }
-}
-
-?>
 
 <body>
     <?php include('includes/header.php'); ?>
-    <?php include('includes/ticker.php'); ?>
+    <?php
+    $username = "";
+
+    $errors = array('username' => '', 'password' => '');
+
+
+    if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $hashpass = md5($password);
+
+        if (empty($username)) {
+            $errors['username'] = 'Username cannot be empty';
+        }
+        if (empty($password)) {
+            $errors['password'] = 'Password cannot be empty';
+        }
+        if ($username != "" && $hashpass != "") {
+            $call = login($username, $hashpass);
+        }
+    }
+
+    ?>
 
     <div id="main-other">
         <div id="sub-other">
@@ -94,9 +92,5 @@ if (isset($_POST['login'])) {
         </div>
     </div>
     </div>
-
-
-
-
 
     <?php include('includes/footer.php'); ?>
