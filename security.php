@@ -2,6 +2,11 @@
 
 <body>
     <?php include('includes/header.php'); ?>
+    <?php
+    if (!isset($_SESSION['user'])) {
+        header("Location: login.php");
+    }
+    ?>
 
     <div id="main-other">
         <div id="sub-other">
