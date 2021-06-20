@@ -1,14 +1,30 @@
+<?php include('./function/function.php'); ?>
 <div id="main-header">
   <!--start header-->
   <div id="sub-header">
-    <div class="ls-left">
-      <div class="lslogin">
-        <a href="login.php" class="a-link"><i class="fa fa-key" aria-hidden="true"></i> Log In</a>
+    <?php
+    if (isset($_SESSION['user'])) { ?>
+      <div class="ls-left">
+        <div class="lslogin">
+          <a href="logout.php" class="a-link"><i class="fa fa-power-off" aria-hidden="true"></i> Log Out</a>
+        </div>
+        <div class="lssignup">
+          <a href="dashboard.php" class="a-link"><i class="fa fa-user" aria-hidden="true"></i> Dashboard</a>
+        </div>
       </div>
-      <div class="lssignup">
-        <a href="register.php" class="a-link"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+    <?php } else { ?>
+      <div class="ls-left">
+        <div class="lslogin">
+          <a href="login.php" class="a-link"><i class="fa fa-key" aria-hidden="true"></i> Log In</a>
+        </div>
+        <div class="lssignup">
+          <a href="register.php" class="a-link"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+        </div>
       </div>
-    </div>
+    <?php }
+    ?>
+
+
     <div class="addby">
       <div class="phone">
         <p><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="date_time"></span></p>

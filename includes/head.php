@@ -20,6 +20,9 @@
 
 
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+
   <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
   <script src="js/calculator.js"></script>
   <script type="text/javascript" src="js/time.js"></script>

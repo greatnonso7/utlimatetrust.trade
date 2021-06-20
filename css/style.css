@@ -10,7 +10,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Neo-Sans-Pro;
+  font-family: 'Open Sans Condensed';
   letter-spacing: 0.5px;
   color: rgba(0, 0, 0, 0.67);
 }
@@ -23,42 +23,48 @@ body {
 h1 {
   font-size: 40px;
   color: #FFFFFF;
-  font-family: Neo-Sans-Pro-Bold;
+  font-family: 'Open Sans Condensed';
+  font-weight: 'bold';
   text-transform: uppercase;
 }
 
 h2 {
   font-size: 35px;
   color: #FFFFFF;
-  font-family: Neo-Sans-Pro-Bold;
+  font-family: 'Open Sans Condensed';
+  font-weight: 'bold';
   text-transform: uppercase;
 }
 
 h3 {
   font-size: 30px;
   color: #FFFFFF;
-  font-family: Neo-Sans-Pro-Bold;
+  font-family: 'Open Sans Condensed';
+  font-weight: 'bold';
   text-transform: uppercase;
 }
 
 h4 {
   font-size: 25px;
   color: #FFFFFF;
-  font-family: Neo-Sans-Pro-Bold;
+  font-family: 'Open Sans Condensed';
+  font-weight: 'bold';
   text-transform: uppercase;
 }
 
 h5 {
   font-size: 20px;
   color: #FFFFFF;
-  font-family: Neo-Sans-Pro-Bold;
+  font-family: 'Open Sans Condensed';
+  font-weight: 'bold';
   text-transform: uppercase;
 }
 
 h6 {
   font-size: 15px;
   color: #FFFFFF;
-  font-family: Neo-Sans-Pro-Bold;
+  font-family: 'Open Sans Condensed';
+  font-weight: 'bold';
 }
 
 h1,
@@ -101,18 +107,8 @@ a {
 }
 
 @font-face {
-  font-family: Neo-Sans-Pro;
-  src: url(fonts/Neo-Sans-Pro.ttf);
-}
-
-@font-face {
-  font-family: Neo-Sans-Pro-Bold;
-  src: url(fonts/Neo-Sans-Pro-Bold.ttf);
-}
-
-@font-face {
-  font-family: Neo-Sans-Pro-Medium;
-  src: url(fonts/Neo-Sans-Pro-Medium.ttf);
+  font-family: 'Neo Sans Pro';
+  src: url('../fonts/Neo-Sans-Pro.ttf');
 }
 
 
@@ -123,7 +119,7 @@ input[type="submit"] {
   color: #FFFFFF;
   background-color: #01bc6a;
   font-size: 17px;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
   padding: 12px 0px;
   border-radius: 5px;
   border-bottom: 1px solid#005780;
@@ -147,7 +143,7 @@ input[type="button"] {
   color: #FFFFFF;
   background-color: #01bc6a;
   font-size: 17px;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
   padding: 12px 0px;
   border-radius: 5px;
   border-bottom: 1px solid#005780;
@@ -204,7 +200,7 @@ textarea {
   height: auto;
   padding: 10px 0px;
   font-size: 16px;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
   color: #FFFFFF;
   display: block;
   text-align: center;
@@ -225,7 +221,7 @@ select {
   border-radius: 3px;
   border: 1px solid #018E08;
   font-size: 15px;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
   color: #000;
   outline: none;
   padding: 10px;
@@ -528,7 +524,7 @@ nav {
   font-size: 30px;
   overflow: hidden;
   margin-top: 10px;
-  font-family: Neo-Sans-Pro-Bold;
+  font-family: 'Open Sans Condensed';
   color: #00e983;
   text-align: center;
 }
@@ -690,7 +686,7 @@ nav {
 .percent p {
   font-size: 55px;
   color: #01bc6a;
-  font-family: Neo-Sans-Pro-Bold;
+  font-family: 'Open Sans Condensed';
 }
 
 .plan-one:hover .percent {
@@ -717,7 +713,7 @@ nav {
 .percent- p {
   font-size: 55px;
   color: #01608d;
-  font-family: Neo-Sans-Pro-Bold;
+  font-family: 'Open Sans Condensed';
 }
 
 .daily {
@@ -729,7 +725,7 @@ nav {
 .daily p {
   font-size: 20px;
   color: #000000;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
 }
 
 .plan-border {
@@ -875,7 +871,7 @@ nav {
 .read-more a {
   font-size: 18px;
   color: #01bc6a;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
 }
 
 #main-choose {
@@ -940,7 +936,7 @@ nav {
   color: #019615;
   font-size: 20px;
   color: #2ddf3d;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
   text-align: left;
 }
 
@@ -1034,7 +1030,7 @@ nav {
 .level-percent {
   height: auto;
   font-size: 30px;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
   color: #005780;
   width: auto;
   text-align: center;
@@ -1046,7 +1042,7 @@ nav {
   text-transform: uppercase;
   color: #01bc6a;
   width: auto;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
   text-align: center;
 }
 
@@ -1065,7 +1061,7 @@ nav {
   text-transform: uppercase;
   color: #000000;
   width: auto;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
   text-align: center;
 }
 
@@ -1545,7 +1541,7 @@ nav {
   overflow: hidden;
   color: #01bc6a;
   font-size: 18px;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
   text-transform: uppercase;
 }
 
@@ -1587,7 +1583,7 @@ nav {
   color: #01bc6a;
   line-height: 26px;
   text-transform: uppercase;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
 }
 
 .loc-text p span {
@@ -1694,7 +1690,7 @@ nav {
 
 .forgot a {
   color: #01bc6a;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
 }
 
 .forgot a span {
@@ -1799,7 +1795,7 @@ nav {
 .ah-head p {
   font-size: 18px;
   color: #FFFFFF;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
   text-transform: uppercase;
 }
 
@@ -1867,7 +1863,7 @@ nav {
 .ui-head p {
   font-size: 18px;
   color: #FFFFFF;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
   text-transform: uppercase;
   margin-left: 17px;
 }
@@ -1905,7 +1901,7 @@ nav {
 .duser-text p {
   font-size: 30px;
   color: #00ee86;
-  font-family: Neo-Sans-Pro-Medium;
+  font-family: 'Open Sans Condensed';
 }
 
 .duser-text p span {

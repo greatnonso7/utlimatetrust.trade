@@ -4,7 +4,7 @@ ob_start();
 
 function register($a, $b, $c, $d, $e, $f)
 {
-  include 'includes/db.php';
+  include 'db.php';
   $a = mysqli_real_escape_string($connection, $a);
   $b = mysqli_real_escape_string($connection, $b);
   $c = mysqli_real_escape_string($connection, $c);
@@ -74,7 +74,7 @@ to make an investment.
   // Insert into the database Table
   $cd = rand(10, 100000000);
   if ($checkemail1 == 0 && $checkuser1 == 0) {
-    $insertdata = mysqli_query($connection, "INSERT INTO users (`user_id`, `firstname`, `lastname`, `username`, `email`, `password`, `referral`) VALUES ('$cd', '$a', '$b','$c', '$d', '$e', '$f')") or die(mysqli_error($connection));
+    $insertdata = mysqli_query($connection, "INSERT INTO users (`user_id`, `fullname`, `username`, `email`, `phone`, `password`, `bitcoin`, `ethereum`, `referral`) VALUES ('$cd', '$a', '$b','$c', '$d', '$e', '$f', '$g', '$h')") or die(mysqli_error($connection));
     if ($insertdata) {
       $_SESSION['success'] = "Your account has been created successfully";
       echo '<script type="text/javascript">toastr.success("Your account has been created successfully.")</script>';
@@ -111,24 +111,28 @@ function verify($code, $token, $email)
   }
 }
 
-function login($username, $pass)
+function login($user, $pass)
 {
   include 'db.php';
-  $username = mysqli_real_escape_string($connection, $username);
+  $user = mysqli_real_escape_string($connection, $user);
   $pass = mysqli_real_escape_string($connection, $pass);
 
 
-  $getinfo = mysqli_query($connection, "SELECT * FROM users WHERE username = '$username'") or die(mysqli_error($connection));
+
+
+  $getinfo = mysqli_query($connection, "SELECT * FROM users WHERE username = '$user'") or die(mysqli_error($connection));
 
   $getinfo1 = mysqli_num_rows($getinfo);
 
 
   if ($getinfo1 == 1) {
     $getinf02 = mysqli_fetch_object($getinfo);
+
+
     if ($getinf02->password === $pass) {
-      $_SESSION['user'] = $username;
+      $_SESSION['user'] = $user;
       echo '<script>
-            window.location.href = "../account/user/index.php"
+            window.location.href = "dashboard.html"
           </script>';
     } else {
       $_SESSION['ERROR'] = 'Email or Password is not correct';
