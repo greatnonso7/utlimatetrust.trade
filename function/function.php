@@ -144,15 +144,12 @@ function login($user, $pass)
 
 function session()
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
+  include('db.php');
 
   $connection = mysqli_connect($servername, $username, $password, $dbname);
   $email = $_SESSION['user'];
 
-  $find = mysqli_query($connection, "SELECT * FROM users WHERE email = '$email'") or die(mysqli_error($connection));
+  $find = mysqli_query($connection, "SELECT * FROM users WHERE username = '$email'") or die(mysqli_error($connection));
 
   $find1 = mysqli_num_rows($find);
 
