@@ -22,40 +22,76 @@
       <div class="desh-right">
 
         <br>
+        <?php
+        $call = session();
 
-        <form method=post><input type="hidden" name="form_id" value="16241866574460"><input type="hidden" name="form_token" value="e4357c105470b50d54f83257b0a62733">
-          <input type=hidden name=a value=withdraw>
-          <input type=hidden name=action value=preview>
-          <div class="main-withdraw-box">
-            <table cellspacing=0 cellpadding=2 border=0 class="tab">
-              <tr>
-                <th>Account Balance:</th>
-                <th>$<b>0.00</b></th>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td> <small>
-                </td>
-              </tr>
-              <tr>
-                <td>Pending Withdrawals: </td>
-                <td>$<b>0.00</b></td>
-              </tr>
+        if ($call[1] > 0) {;
 
-              <tr>
-                <td>Your Bitcoin Account:</td>
-                <td><a href="edit_account.php"><i>not set</i></a></td>
-              </tr>
-              <tr>
-                <td>Your Ethereum Account:</td>
-                <td><a href="edit_account.php"><i>not set</i></a></td>
-              </tr>
-            </table>
-          </div>
+          while ($data = mysqli_fetch_object($call[0])) {
+        ?>
 
-          <br><br>
-          You have no funds to withdraw.
-        </form>
+            <form method=post>
+
+              <div class="main-withdraw-box">
+                <table cellspacing=0 cellpadding=2 border=0 class="tab">
+                  <tr>
+                    <th>Account Balance:</th>
+                    <th>$<b><?php echo $data->wallet; ?></b></th>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td> <small>
+                    </td>
+                  </tr>
+                  <tr>
+                    <?php
+                    $lastWithdraw = getLastWithdrawal();
+
+                    ?>
+                    <td>Pending Withdrawals: </td>
+                    <td>$<b>
+                        <?php if ($lastWithdraw === NULL) {
+                          echo '0.00';
+                        } else {
+                          echo $lastWithdraw;
+                        } ?>
+                      </b></td>
+                  </tr>
+
+                  <tr>
+                    <td>Your Bitcoin Account:</td>
+                    <td><a href="edit_account.php">
+                        <i>
+                          <?php if ($data->bitcoin === "" || $data->bitcoin === NULL) {
+                            echo 'not set';
+                          } else {
+                            echo $data->bitcoin;
+                          }
+                          ?>
+                        </i></a></td>
+                  </tr>
+                  <tr>
+                    <td>Your Ethereum Account:</td>
+                    <td><a href="edit_account.php">
+                        <i>
+                          <?php if ($data->ethereum === "" || $data->ethereum === NULL) {
+                            echo 'not set';
+                          } else {
+                            echo $data->ethereum;
+                          }
+                          ?></i></a></td>
+                  </tr>
+                </table>
+              </div>
+
+              <br><br>
+
+              <?php
+              if ($data->wallet === '0') {
+                echo 'You have no funds to withdraw.';
+              }
+              ?>
+            </form>
 
       </div>
     </div>
@@ -63,7 +99,9 @@
 
 
 
+<?php }
+        } ?>
 
 
 
-  <?php include('includes/footer.php'); ?>
+<?php include('includes/footer.php'); ?>

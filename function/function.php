@@ -521,16 +521,11 @@ function getCurrentUserWallets()
 
 function userInvestments()
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $email = $_SESSION['user'];
 
-  $find = mysqli_query($connection, "SELECT * FROM investments WHERE email = '$email'  ORDER BY id DESC") or die(mysqli_error($connection));
+  $find = mysqli_query($connection, "SELECT * FROM investments WHERE username = 'Princy'  ORDER BY id DESC") or die(mysqli_error($connection));
 
   $find1 = mysqli_num_rows($find);
 
@@ -573,7 +568,7 @@ function updateUserInfo($country, $state, $address, $phone)
 
 function updateWalletInfo($a)
 {
-  include '../includes/db.php';
+  include 'db.php';
   $email = $_SESSION['user'];
 
   $a = mysqli_real_escape_string($connection, $a);
@@ -588,6 +583,25 @@ function updateWalletInfo($a)
       $_SESSION['success'] = 'Wallet Address updated successfully';
     }
   }
+}
+
+function getLastWithdrawal()
+{
+  include('db.php');
+
+  $username = $_SESSION['user'];
+
+  $query = mysqli_query($connection, "SELECT amount from withdrawals WHERE status='pending' AND username = '$username' ORDER BY id DESC LIMIT 1") or die(mysqli_error($connection));
+
+  $find1 = mysqli_fetch_object($query);
+
+  $amount = $find1->amount;
+
+  if ($find1 > 0) {
+    return $amount;
+  } else {
+    return NULL;
+  };
 }
 
 function requestWithdrawal($a, $b, $c, $d, $e, $f, $g)
