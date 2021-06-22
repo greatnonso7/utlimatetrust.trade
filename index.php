@@ -4,7 +4,6 @@
     <?php include("includes/header.php"); ?>
 
     <!--end menu-->
-    <?php include("includes/ticker.php"); ?>
 
     <div id="main-slider">
         <!--start slider-->

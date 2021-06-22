@@ -10,6 +10,8 @@
   <!--end menu-->
 
   <?php
+  $errors = array('investment' => '');
+
 
   if (isset($_POST['invest'])) {
     $invest = $_POST['investment'];
@@ -65,20 +67,19 @@
     }
 
     if (!$invest) {
-      echo 'Plan is not selected';
+      $errors['investment'] = "Plan is not selected";
     }
 
     if ($invest && empty($amount)) {
-      echo 'Amount to invest is empty';
+
+      $errors['investment'] = 'Amount to invest is empty';
     }
     if ($invest && $amount < $min_invest) {
-      echo 'Amount is lesser than minimum invest';
+      $errors['investment'] = 'Amount is lesser than minimum invest';
     }
     if ($invest && $amount > $max_invest) {
-      echo 'Amount is greater than maximum invest';
+      $errors['investment'] = 'Amount is greater than maximum invest';
     }
-
-    echo $coin;
   }
   ?>
 
@@ -97,6 +98,12 @@
       <div class="desh-right">
 
         <br>
+        <?php
+        if (!empty($errors)) {
+          echo $errors['investment'];
+        }
+
+        ?>
         <form method=post>
 
           <input type=hidden name=a value=deposit>
