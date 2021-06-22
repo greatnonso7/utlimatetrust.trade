@@ -120,7 +120,7 @@ function login($user, $pass)
 
 
 
-  $getinfo = mysqli_query($connection, "SELECT * FROM users WHERE username = '$user'") or die(mysqli_error($connection));
+  $getinfo = mysqli_query($connection, "SELECT * FROM users WHERE email = '$user'") or die(mysqli_error($connection));
 
   $getinfo1 = mysqli_num_rows($getinfo);
 
@@ -150,7 +150,7 @@ function session()
   $email = $_SESSION['user'];
 
 
-  $find = mysqli_query($connection, "SELECT * FROM users WHERE username = '$email'") or die(mysqli_error($connection));
+  $find = mysqli_query($connection, "SELECT * FROM users WHERE email = '$email'") or die(mysqli_error($connection));
 
   $find1 = mysqli_num_rows($find);
 
@@ -673,7 +673,7 @@ function deposit($coinname, $address, $response, $amount)
   $insertdata = mysqli_query($connection, "INSERT INTO deposits (deposit_id, coin, wallet_address, amount, usd, email,status) VALUES ('$deposit_id', '$coinname', '$address', '$response', '$amount', '$email','$status')") or die(mysqli_error($connection));
 
   if ($insertdata) {
-    header("Location: index.php");
+    header("Location: dashboard.php");
   }
 }
 

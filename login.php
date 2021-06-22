@@ -3,24 +3,24 @@
 <body>
     <?php include('includes/header.php'); ?>
     <?php
-    $username = "";
+    $email = "";
 
-    $errors = array('username' => '', 'password' => '');
+    $errors = array('email' => '', 'password' => '');
 
 
     if (isset($_POST['login'])) {
-        $username = $_POST['username'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
         $hashpass = md5($password);
 
-        if (empty($username)) {
-            $errors['username'] = 'Username cannot be empty';
+        if (empty($email)) {
+            $errors['email'] = 'Email cannot be empty';
         }
         if (empty($password)) {
             $errors['password'] = 'Password cannot be empty';
         }
-        if ($username != "" && $hashpass != "") {
-            $call = login($username, $hashpass);
+        if ($email != "" && $hashpass != "") {
+            $call = login($email, $hashpass);
         }
     }
 
@@ -57,11 +57,11 @@
                     <div style="width: 54%;    padding-left: 27%;" class="information-left">
                         <div class="info-one">
                             <div class="info-tittle">
-                                <p><img src="images/ruser.png">Your Username</p>
+                                <p><img src="images/email.png" width="25px">Your email</p>
                             </div>
                             <div class="info-type">
-                                <input type="text" name=username value=''>
-                                <span style="color: red"><?php echo $errors['username']; ?></span>
+                                <input type="text" name=email value=''>
+                                <span style="color: red"><?php echo $errors['email']; ?></span>
 
                             </div>
                         </div>
