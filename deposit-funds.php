@@ -63,16 +63,14 @@
             </div>
             <div style="display: flex; flex-direction:column; justify-content: center; align-items: center; margin-top: 15px">
               <p>Carefully scan or copy Ultimate Trust Trade wallet address.</p>
-              <h1>You're about to pay </h1>
+              <h1 style="color: #000">You're about to pay </h1>
 
               <?php if ($coinname === 'BTC') { ?>
-                <h4><?php echo $response; ?> <?php echo strtolower($coinname); ?></h4>
+                <h4 style="color: #000"><?php echo $response; ?> <?php echo strtolower($coinname); ?></h4>
 
               <?php } else if ($coinname === 'ETH') { ?>
-                <h4><?php echo $response; ?> <?php echo strtolower($coinname); ?></h4>
+                <h4 style="color: #000"><?php echo $response; ?> <?php echo strtolower($coinname); ?></h4>
 
-              <?php } else if ($coinname === 'PAYPAL') { ?>
-                <h4><?php echo '$' . $response; ?></h4>
               <?php } ?>
               <?php
               if ($coinname === 'BTC') { ?>

@@ -58,7 +58,7 @@
                                 <img src="images/loc.png">
                             </div>
                             <div class="loc-text">
-                                <p>Fidelity Trade Ltd<br><span>27 Old Gloucester Street, London,<br>WC1N 3AX, United Kingdom</span></p>
+                                <p>Ultimate Trust Trade<br><span>27 Old Gloucester Street, London,<br>WC1N 3AX, United Kingdom</span></p>
                             </div>
                         </div>
                         <div class="phonef-">

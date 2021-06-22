@@ -219,7 +219,7 @@
   <div id="main-finish">
     <div id="sub-finish">
       <div class="reserved">
-        <p>Copyright © 2021 Fidelity Trade Ltd, All Rights Reserved</p>
+        <p>Copyright © 2021 Ultimate Trust Trade, All Rights Reserved</p>
       </div>
       <div class="down-right">
         <div class="accby">

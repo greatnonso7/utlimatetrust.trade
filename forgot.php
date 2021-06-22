@@ -7,7 +7,7 @@
     <div id="main-other">
         <div id="sub-other">
             <div class="other-head">
-                <h1>Fidelity Trade Ltd</h1>
+                <h1>Ultimate Trust Trade</h1>
             </div>
         </div>
     </div>

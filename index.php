@@ -242,7 +242,7 @@
                                 <p>Experienced Trading Team</p>
                             </div>
                             <div class="adva-text-">
-                                <p>Fidelity Trade Ltd is a team of professional in
+                                <p>Ultimate Trust Trade is a team of professional in
                                     cryptocurrency mining. who know how cryptocurrency mining works.</p>
                             </div>
                         </div>
@@ -256,7 +256,7 @@
                                 <p>Strong DDoS Protection</p>
                             </div>
                             <div class="adva-text-">
-                                <p>Fidelity Trade Ltd web servers protected by
+                                <p>Ultimate Trust Trade web servers protected by
                                     DDOS-Guard, It's one of the world's trusted DDoS Protection and mitigation provider. </p>
                             </div>
                         </div>
@@ -336,7 +336,7 @@
                     </div>
                 </div>
                 <div class="level-text">
-                    <p>If someone signed up using your link & has made a deposit of $500 in Fidelity Trade Ltd. So, immediately your account will be credited with $25. Now, when that person invites someone & they deposit, say 500$, your account will be credited with $15. And that is not all! When your referral from 3rd level makes a deposit of 500$, your account will receive a reward of $10 !</p>
+                    <p>If someone signed up using your link & has made a deposit of $500 in Ultimate Trust Trade. So, immediately your account will be credited with $25. Now, when that person invites someone & they deposit, say 500$, your account will be credited with $15. And that is not all! When your referral from 3rd level makes a deposit of 500$, your account will receive a reward of $10 !</p>
                 </div>
             </div>
             <div class="state-right">
@@ -443,7 +443,7 @@
 
             <div class="invest-left2 zoomIn  wow animated" data-wow-duration="2s">
                 <div class="fb-page" data-href="#" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                    <blockquote cite="https://www.facebook.com/Fidelity Trade Ltd/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Fidelity Trade Ltd/">Best HYIP Template</a></blockquote>
+                    <blockquote cite="https://www.facebook.com/Ultimate Trust Trade/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ultimate Trust Trade/">Best HYIP Template</a></blockquote>
                 </div>
             </div>
 

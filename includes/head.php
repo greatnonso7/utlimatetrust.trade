@@ -5,7 +5,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Fidelity Trade Ltd</title>
+  <title>Ultimate Trust Trade Investment</title>
   <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" type="text/css" href="css/animate.css" />

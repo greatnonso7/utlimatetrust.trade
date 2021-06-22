@@ -55,10 +55,10 @@
                                     </div>
                                 </div>
                                 <div class="action-buttons">
-                                    <div class="md">
+                                    <div class="md" style="padding: 10px">
                                         <a href="make-deposit.php" class="a-link">DEPOSIT FUNDS </a>
                                     </div>
-                                    <div class="md">
+                                    <div class="md" style="padding: 10px">
                                         <a href="deposit.php" class="a-link">INVEST FUNDS</a>
                                     </div>
                                 </div>
@@ -90,12 +90,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mw">
+                                <div class="mw" style="padding: 10px">
                                     <a href="withdraw.php" class="a-link">WITHDRAW FUNDS</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="desheb">
+                        <div class="desheb" style="padding: 10px">
                             <div class="desh-balance">
                                 <div class="balance-icon">
                                     <img src="images/wallet.png" width="60px">
@@ -123,7 +123,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="desheb">
+                        <div class="desheb" style="padding: 10px">
                             <div class="desh-balance">
                                 <div class="balance-icon">
                                     <img src="images/withdraw.png" width="60px">

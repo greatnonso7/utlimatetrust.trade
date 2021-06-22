@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Fidelity Trade Ltd</title>
+    <title>Ultimate Trust Trade</title>
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
@@ -216,7 +216,7 @@
     <div id="main-finish">
         <div id="sub-finish">
             <div class="reserved">
-                <p>Copyright © 2021 Fidelity Trade Ltd, All Rights Reserved</p>
+                <p>Copyright © 2021 Ultimate Trust Trade, All Rights Reserved</p>
             </div>
             <div class="down-right">
                 <div class="accby">
