@@ -93,7 +93,7 @@ to make an investment.
 
 function verify($code, $token, $email)
 {
-  include 'includes/db.php';
+  include 'db.php';
   $code = mysqli_real_escape_string($connection, $code);
 
   $getinfo = mysqli_query($connection, "SELECT  email, emailVerifyToken, verifyCode  FROM users WHERE email = '$email' AND verifyCode = '$code' AND accountVerified = 0") or die(mysqli_error($connection));
@@ -161,7 +161,7 @@ function session()
 
 function forgot($email)
 {
-  include 'includes/db.php';
+  include 'db.php';
   $email = mysqli_real_escape_string($connection, $email);
 
   $key = substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 40);
@@ -230,7 +230,7 @@ Hello , you forgot your password, dont be hard on yourself because we all do.<br
 
 function resetpass($hashpass, $email, $token)
 {
-  include 'includes/db.php';
+  include 'db.php';
   $hashpass = mysqli_real_escape_string($connection, $hashpass);
 
   $getinfo = mysqli_query($connection, "SELECT email, token FROM password_resets WHERE email = '$email' AND token = '$token'") or die(mysqli_error($connection));
@@ -252,12 +252,7 @@ function resetpass($hashpass, $email, $token)
 
 function transfer($user, $amount)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
   $user = mysqli_real_escape_string($connection, $user);
   $amount = mysqli_real_escape_string($connection, $amount);
 
@@ -298,12 +293,7 @@ function transfer($user, $amount)
 function invest($a, $b, $c, $d, $e, $f, $g)
 {
 
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
   $a = mysqli_real_escape_string($connection, $a);
   $b = mysqli_real_escape_string($connection, $b);
   $c = mysqli_real_escape_string($connection, $c);
@@ -352,12 +342,7 @@ function invest($a, $b, $c, $d, $e, $f, $g)
 
 function countInvestments()
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $email = $_SESSION['user'];
 
@@ -372,12 +357,7 @@ function countInvestments()
 
 function countWithdrawal()
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $email = $_SESSION['user'];
 
@@ -396,12 +376,7 @@ function countWithdrawal()
 
 function getReferralInvestmentDetails()
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $email = $_SESSION['user'];
 
@@ -417,12 +392,7 @@ function getReferralInvestmentDetails()
 
 function getCurrentUserTransfers()
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $email = $_SESSION['user'];
 
@@ -438,12 +408,7 @@ function getCurrentUserTransfers()
 
 function addWallet($coinhost, $wallet, $coin)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $email = $_SESSION['user'];
 
@@ -458,12 +423,7 @@ function addWallet($coinhost, $wallet, $coin)
 
 function addBank($bankname, $accountnumber, $accountname)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $email = $_SESSION['user'];
 
@@ -479,12 +439,7 @@ function addBank($bankname, $accountnumber, $accountname)
 
 function getCurrentUserBanks()
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $email = $_SESSION['user'];
 
@@ -500,12 +455,7 @@ function getCurrentUserBanks()
 
 function getCurrentUserWallets()
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $email = $_SESSION['user'];
 
@@ -539,12 +489,7 @@ function userInvestments()
 
 function updateUserInfo($country, $state, $address, $phone)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
   $email = $_SESSION['user'];
 
 
@@ -607,12 +552,7 @@ function getLastWithdrawal()
 
 function requestWithdrawal($a, $b, $c, $d, $e, $f, $g)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $a = mysqli_real_escape_string($connection, $a);
   $b = mysqli_real_escape_string($connection, $b);
@@ -641,12 +581,7 @@ function requestWithdrawal($a, $b, $c, $d, $e, $f, $g)
 
 function showWithdrawals()
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
   $email = $_SESSION['user'];
 
   $sql = mysqli_query($connection, "SELECT * FROM withdrawals WHERE email = '$email' ORDER BY id DESC") or die(mysqli_error($connection));
@@ -661,12 +596,7 @@ function showWithdrawals()
 
 function changePassword($oldPassword, $newPassword)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
   $email = $_SESSION['user'];
 
   $getUsers = mysqli_query($connection, "SELECT * FROM users WHERE email = '$email'") or die(mysqli_error($connection));
@@ -683,36 +613,21 @@ function changePassword($oldPassword, $newPassword)
 
 function updateWallet($a)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
   $email = $_SESSION['user'];
   $find = mysqli_query($connection, "UPDATE users SET wallet = '$a' WHERE email = '$email'") or die(mysqli_error($connection));
 }
 
 function updateTotalInvest($a)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
   $email = $_SESSION['user'];
   $find = mysqli_query($connection, "UPDATE users SET total_invest = '$a' WHERE email = '$email'") or die(mysqli_error($connection));
 }
 
 function updateTotalWithdraw($a)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
   $email = $_SESSION['user'];
   $find = mysqli_query($connection, "UPDATE users SET total_withdraw = '$a' WHERE email = '$email'") or die(mysqli_error($connection));
 }
@@ -720,12 +635,8 @@ function updateTotalWithdraw($a)
 
 function removeCashout($a)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
+  include('db.php');
 
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
   $email = $_SESSION['user'];
   $status = 'cashout';
   $find = mysqli_query($connection, "UPDATE investments SET status='$status' WHERE invest_id = '$a' AND email='$email'") or die(mysqli_error($connection));
@@ -733,12 +644,7 @@ function removeCashout($a)
 
 function getReferrals()
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
   $email = $_SESSION['user'];
 
   $find = mysqli_query($connection, "SELECT * FROM users WHERE email='$email'") or die(mysqli_error($connection));
@@ -758,12 +664,7 @@ function getReferrals()
 
 function deposit($coinname, $address, $response, $amount)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $email = $_SESSION['user'];
   $deposit_id = rand(100000, 10000000);
@@ -778,12 +679,7 @@ function deposit($coinname, $address, $response, $amount)
 
 function getDeposits()
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
 
   $email = $_SESSION['user'];
   $find = mysqli_query($connection, "SELECT * FROM deposits WHERE email = '$email' ") or die(mysqli_error($connection));
@@ -798,12 +694,7 @@ function getDeposits()
 
 function userSingleInvestments($a)
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "12345678";
-  $dbname = "ultracoin";
-
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  include('db.php');
   $email = $_SESSION['user'];
 
   $find = mysqli_query($connection, "SELECT * FROM investments WHERE email = '$email' AND invest_id='$a' ") or die(mysqli_error($connection));
