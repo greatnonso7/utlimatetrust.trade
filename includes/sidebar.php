@@ -3,7 +3,7 @@
 
     <ul>
       <li><a href="dashboard.php"><i class="fa fa-university" aria-hidden="true"></i> Account Overview</a></li>
-      <li><a href="dashboard.php"><i class="fa fa-dollar" aria-hidden="true"></i>Deposit Funds</a></li>
+      <li><a href="make-deposit.php"><i class="fa fa-dollar" aria-hidden="true"></i>Deposit Funds</a></li>
       <li><a href="deposit.php"><i class="fa fa-cloud-download" aria-hidden="true"></i> Make Deposit</a></li>
       <li><a href="withdraw.php"><i class="fa fa-briefcase" aria-hidden="true"></i> Withdraw Fund</a></li>
       <li><a href="deposit_list.php"><i class="fa fa-list" aria-hidden="true"></i> Deposit List</a></li>

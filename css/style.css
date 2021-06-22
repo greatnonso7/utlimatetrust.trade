@@ -1812,6 +1812,30 @@ nav {
   padding: 22px 20px;
 }
 
+.card-container {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.btn-deposit {
+  height: 40px;
+  width: 200px;
+  background: #00b662;
+  border-radius: 10px;
+  color: #f5f6f7;
+  cursor: pointer;
+}
+
+.btc-card {
+  height: 250px;
+  width: 340px;
+  border: 1px solid black;
+  /* background: blue; */
+  margin-top: 15px;
+  border-radius: 10px;
+  padding: 22px 20px;
+}
+
 .details-down {
   height: auto;
   width: 100%;
