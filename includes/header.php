@@ -1,4 +1,3 @@
-<?php include('./function/function.php'); ?>
 <div id="main-header">
   <!--start header-->
   <div id="sub-header">

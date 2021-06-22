@@ -54,8 +54,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="md">
-                                    <a href="deposit.php" class="a-link">Make Deposit</a>
+                                <div class="action-buttons">
+                                    <div class="md">
+                                        <a href="make-deposit.php" class="a-link">DEPOSIT FUNDS </a>
+                                    </div>
+                                    <div class="md">
+                                        <a href="deposit.php" class="a-link">INVEST FUNDS</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="rightup-right">
@@ -86,34 +91,62 @@
                                     </div>
                                 </div>
                                 <div class="mw">
-                                    <a href="withdraw.php" class="a-link">Withdraw Fund</a>
+                                    <a href="withdraw.php" class="a-link">WITHDRAW FUNDS</a>
                                 </div>
                             </div>
                         </div>
                         <div class="desheb">
                             <div class="desh-balance">
                                 <div class="balance-icon">
-                                    <img src="images/tb.png">
+                                    <img src="images/wallet.png" width="60px">
                                 </div>
                                 <div class="balance-text">
                                     <div class="balance-amount">
-                                        <p>$<b>0.00</b></p>
+                                        <p>$<b><?php echo $data->wallet; ?></b></p>
                                     </div>
                                     <div class="balance-tittle">
-                                        <p>Account Balance</p>
+                                        <p>WALLET BALANCE</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desh-balance">
+                                <div class="balance-icon">
+                                    <img src="images/funds.png" width="60px">
+                                </div>
+                                <div class="balance-text">
+                                    <div class="balance-amount">
+                                        <p>$<b><?php echo $data->total_invest; ?></b></p>
+                                    </div>
+                                    <div class="balance-tittle">
+                                        <p>TOTAL INVESTMENT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desheb">
+                            <div class="desh-balance">
+                                <div class="balance-icon">
+                                    <img src="images/withdraw.png" width="60px">
+                                </div>
+                                <div class="balance-text">
+                                    <div class="balance-amount">
+                                        <p>$<b><?php echo $data->total_withdraw; ?></b></p>
+                                    </div>
+                                    <div class="balance-tittle">
+                                        <p>TOTAL WITHDRAWAL</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="desh-earn">
                                 <div class="balance-icon">
-                                    <img src="images/te.png">
+                                    <img src="images/collaboration.png" width="60px">
                                 </div>
                                 <div class="balance-text">
                                     <div class="balance-amount">
-                                        <p>$<b>0.00</b></p>
+                                        <p>$<b><?php echo $data->ref_bonus; ?></b></p>
                                     </div>
                                     <div class="balance-tittle">
-                                        <p>Earning Total</p>
+                                        <p>REFERRAL BONUS</p>
                                     </div>
                                 </div>
                             </div>

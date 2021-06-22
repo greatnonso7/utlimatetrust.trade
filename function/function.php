@@ -149,6 +149,7 @@ function session()
   $connection = mysqli_connect($servername, $username, $password, $dbname);
   $email = $_SESSION['user'];
 
+
   $find = mysqli_query($connection, "SELECT * FROM users WHERE username = '$email'") or die(mysqli_error($connection));
 
   $find1 = mysqli_num_rows($find);

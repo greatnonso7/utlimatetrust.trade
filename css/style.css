@@ -1962,12 +1962,19 @@ nav {
 
 
 .desheb {
-  height: auto;
-  width: 690px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 30px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-evenly;
 }
+
+.action-buttons {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: space-evenly;
+}
+
 
 .desh-balance {
   height: auto;

@@ -1,3 +1,5 @@
+<?php include('./function/function.php'); ?>
+
 <!doctype html>
 <html>
 
