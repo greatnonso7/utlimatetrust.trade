@@ -118,24 +118,12 @@
                 </div>
             </div>
             <div class="dc">
-
-
-
-
-
-
-
                 <div class="dm fadeInLeft animated wow" data-wow-duration="2s" data-wow-delay="0.4s">
-                    <a href="?a=login" class="a-link"><i class="fa fa-download" aria-hidden="true"></i> DEPOSIT NOW</a>
+                    <a href="login.php" class="a-link"><i class="fa fa-download" aria-hidden="true"></i> DEPOSIT NOW</a>
                 </div>
-
-
             </div>
 
-
             <div id="loginmodal" style="display:none;">
-
-
                 <div class="proftical">
                     <div class="about-head">
                         <h4 style="text-align:center;color:#01bc6a;">Profit Calculators</h4>
@@ -184,18 +172,10 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
-
         </div>
     </div>
     <!--end plan-->
-
-
-
-
 
     <div id="main-about">
         <!--start about-->
@@ -379,11 +359,6 @@
                 <div class="invest-head">
                     <h4>Latest investments</h4>
                 </div>
-
-
-
-
-
                 <div class="invest-tittle">
                     <div class="invest-time">
                         <p>N/A</p>
@@ -395,21 +370,12 @@
                         <p>N/A</p>
                     </div>
                 </div>
-
-
-
-
             </div>
-
-
-
 
             <div class="invest-left">
                 <div class="invest-head">
                     <h4>Latest WITHDRAWALS</h4>
                 </div>
-
-
 
                 <div class="invest-tittle">
                     <div class="invest-time">
@@ -422,8 +388,6 @@
                         <p>N/A</p>
                     </div>
                 </div>
-
-
 
             </div>
 
@@ -440,18 +404,7 @@
                 }(document, 'script', 'facebook-jssdk'));
             </script>
 
-
-            <div class="invest-left2 zoomIn  wow animated" data-wow-duration="2s">
-                <div class="fb-page" data-href="#" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                    <blockquote cite="https://www.facebook.com/Ultimate Trust Trade/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ultimate Trust Trade/">Best HYIP Template</a></blockquote>
-                </div>
-            </div>
-
         </div>
     </div>
-
-
-
-
 
     <?php include("includes/footer.php"); ?>
