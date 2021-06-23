@@ -21,13 +21,13 @@
         <div class="page-titles">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-            <li class="breadcrumb-item active"><a href="#">All Fortra-Market User</a></li>
+            <li class="breadcrumb-item active"><a href="#">All Ultimate Trust Trade User</a></li>
           </ol>
         </div>
         <div class="col-lg-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title">All Fortra-Market Users</h4>
+              <h4 class="card-title">All Ultimate Trust Trade Users</h4>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -49,7 +49,7 @@
                     ?>
                           <tr>
                             <td><?php echo $data->user_id; ?></td>
-                            <td><?php echo $data->firstname; ?> <?php echo $data->lastname; ?></td>
+                            <td><?php echo $data->fullname; ?></td>
                             <td><?php echo $data->email; ?></td>
                             <td><?php echo $data->username; ?></td>
                             <td>

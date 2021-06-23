@@ -35,8 +35,8 @@
         <div class="page-titles">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-            <li class="breadcrumb-item"><a href="investments.php">All Fortra-Market Investments</a></li>
-            <li class="breadcrumb-item active"><a href="#">Single Fortra-Market Investment</a></li>
+            <li class="breadcrumb-item"><a href="investments.php">All Ultimate Trust Trade Investments</a></li>
+            <li class="breadcrumb-item active"><a href="#">Single Ultimate Trust Trade Investment</a></li>
 
           </ol>
         </div>

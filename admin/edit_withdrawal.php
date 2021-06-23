@@ -25,8 +25,8 @@
         <div class="page-titles">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-            <li class="breadcrumb-item"><a href="withdrawals.php">All Fortra-Market Withdrawals</a></li>
-            <li class="breadcrumb-item active"><a href="#">Single Fortra-Market Withdrawal</a></li>
+            <li class="breadcrumb-item"><a href="withdrawals.php">All Ultimate Trust Trade Withdrawals</a></li>
+            <li class="breadcrumb-item active"><a href="#">Single Ultimate Trust Trade Withdrawal</a></li>
 
           </ol>
         </div>

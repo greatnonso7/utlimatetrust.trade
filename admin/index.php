@@ -172,7 +172,7 @@
 											?>
 														<tr>
 															<td><?php echo $data->user_id; ?></td>
-															<td><?php echo $data->firstname; ?> <?php echo $data->lastname; ?></td>
+															<td><?php echo $data->fullname; ?></td>
 															<td><?php echo $data->email; ?></td>
 															<td><?php echo $data->username; ?></td>
 														</tr>

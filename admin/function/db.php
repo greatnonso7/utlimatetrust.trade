@@ -2,6 +2,6 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "fortra_market";
+$dbname = "ultimate_trade";
 
 $connection = mysqli_connect($servername, $username, $password, $dbname);

@@ -44,8 +44,8 @@
               <div class="page-titles">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                  <li class="breadcrumb-item"><a href="deposits.php">All Fortra-Market Deposits</a></li>
-                  <li class="breadcrumb-item active"><a href="#">Single Fortra-Market Deposit</a></li>
+                  <li class="breadcrumb-item"><a href="deposits.php">All Ultimate Trust Trade Deposits</a></li>
+                  <li class="breadcrumb-item active"><a href="#">Single Ultimate Trust Trade Deposit</a></li>
 
                 </ol>
               </div>

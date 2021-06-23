@@ -21,13 +21,13 @@
         <div class="page-titles">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-            <li class="breadcrumb-item active"><a href="#">All Fortra-Market Withdrawals</a></li>
+            <li class="breadcrumb-item active"><a href="#">All Ultimate Trust Trade Withdrawals</a></li>
           </ol>
         </div>
         <div class="col-lg-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title">All Fortra-Market Withdrawals</h4>
+              <h4 class="card-title">All Ultimate Trust Trade Withdrawals</h4>
             </div>
             <div class="card-body">
               <div class="table-responsive">

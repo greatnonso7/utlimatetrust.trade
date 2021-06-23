@@ -2,7 +2,7 @@
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "";
-$db = "fortra_market";
+$db = "ultimate_trade";
 
 
 try {

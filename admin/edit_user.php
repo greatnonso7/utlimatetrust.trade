@@ -23,8 +23,8 @@
 				<div class="page-titles">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="users.php">All Fortra-Market Users</a></li>
-						<li class="breadcrumb-item active"><a href="#">Single Fortra-Market User</a></li>
+						<li class="breadcrumb-item"><a href="users.php">All Ultimate Trust Trade Users</a></li>
+						<li class="breadcrumb-item active"><a href="#">Single Ultimate Trust Trade User</a></li>
 
 					</ol>
 				</div>
