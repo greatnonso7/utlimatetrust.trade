@@ -303,7 +303,7 @@ function invest($a, $b, $c, $d, $e, $f, $g)
   $g = mysqli_real_escape_string($connection, $g);
   $date = date("d-m-Y H:i:s");
 
-  $status = 'pending';
+  $status = 'approved';
   $invest_id = uniqid();
   $email = $_SESSION['user'];
 
@@ -334,7 +334,7 @@ function invest($a, $b, $c, $d, $e, $f, $g)
 
   if ($sql) {
     $_SESSION['MSG'] = "Your Investment was successful";
-    header('location: investments.php');
+    header('location: deposit_list.php');
     exit();
   }
 }
@@ -469,6 +469,66 @@ function getCurrentUserWallets()
   };
 }
 
+function totalInvestments()
+{
+  include('db.php');
+
+  $email = $_SESSION['user'];
+
+
+  $getAllDeposits = mysqli_query($connection, "SELECT SUM(amount) as sum FROM investments WHERE email = '$email'") or die(mysqli_error($connection));
+
+  $val = mysqli_fetch_array($getAllDeposits);
+
+  $tech_total = $val['sum'];
+
+  if ($tech_total === NULL) {
+    return 0;
+  } else {
+    return $tech_total;
+  }
+}
+
+function totalDeposit()
+{
+  include('db.php');
+
+  $email = $_SESSION['user'];
+
+
+  $getAllDeposits = mysqli_query($connection, "SELECT SUM(usd) as sum FROM deposits WHERE email = '$email'") or die(mysqli_error($connection));
+
+  $val = mysqli_fetch_array($getAllDeposits);
+
+  $tech_total = $val['sum'];
+
+  if ($tech_total === NULL) {
+    return 0;
+  } else {
+    return $tech_total;
+  }
+}
+
+function totalWithdraw()
+{
+  include('db.php');
+
+  $email = $_SESSION['user'];
+
+
+  $getAllDeposits = mysqli_query($connection, "SELECT SUM(amount) as sum FROM withdrawals WHERE email = '$email'") or die(mysqli_error($connection));
+
+  $val = mysqli_fetch_array($getAllDeposits);
+
+  $tech_total = $val['sum'];
+
+  if ($tech_total === NULL) {
+    return 0;
+  } else {
+    return $tech_total;
+  }
+}
+
 
 function userInvestments()
 {
@@ -476,7 +536,7 @@ function userInvestments()
 
   $email = $_SESSION['user'];
 
-  $find = mysqli_query($connection, "SELECT * FROM investments WHERE username = 'Princy'  ORDER BY id DESC") or die(mysqli_error($connection));
+  $find = mysqli_query($connection, "SELECT * FROM investments WHERE email = '$email'  ORDER BY id DESC") or die(mysqli_error($connection));
 
   $find1 = mysqli_num_rows($find);
 

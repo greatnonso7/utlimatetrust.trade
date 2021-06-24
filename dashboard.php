@@ -44,13 +44,17 @@
                                             <p>Last Deposit <span>$<b>N/A</b></span></p>
                                         </div>
                                         <div class="details-oneh">
-                                            <p>Total Deposit <span> $<b>0.00</b></span></p>
+                                            <?php
+                                            $call = totalDeposit(); ?>
+                                            <p>Total Deposit <span> $<b><?php echo $call; ?></b></span></p>
                                         </div>
                                         <div class="details-oneh">
                                             <p>Last Withdraw <span>$<b>N/A</b></span></p>
                                         </div>
                                         <div class="details-oneh">
-                                            <p>Total Withdraw <span>$<b>0.00</b></span></p>
+                                            <?php
+                                            $call = totalWithdraw(); ?>
+                                            <p>Total Withdraw <span>$<b><?php echo $call; ?></b></span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +119,9 @@
                                 </div>
                                 <div class="balance-text">
                                     <div class="balance-amount">
-                                        <p>$<b><?php echo $data->total_invest; ?></b></p>
+                                        <?php
+                                        $call = totalInvestments(); ?>
+                                        <p>$<b><?php echo $call; ?></b></p>
                                     </div>
                                     <div class="balance-tittle">
                                         <p>TOTAL INVESTMENT</p>

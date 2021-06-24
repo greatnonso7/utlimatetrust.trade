@@ -23,10 +23,6 @@
         <?php //include('includes/loader.php'); 
         ?>
 
-
-        <!--**********************************
-        Main wrapper start
-    ***********************************-->
         <div id="main-wrapper">
 
           <?php include('includes/header.php'); ?>

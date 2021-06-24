@@ -23,7 +23,11 @@
 
         <br>
 
-        <b>Total: $0.00</b><br><br>
+        <?php
+        $call = totalInvestments(); ?>
+
+
+        <b>Total: $<?php echo $call; ?></b><br><br>
 
         <table cellspacing=1 cellpadding=2 border=0 width=100% class="tab">
           <thead>
