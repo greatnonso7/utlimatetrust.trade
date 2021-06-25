@@ -42,50 +42,63 @@
             </tr>
           </thead>
           <?php
+          if (isset($_SESSION['user']));
+
           $call = userInvestments();
+          $userInfo = session();
+
           if ($call[1] > 0) {;
 
             while ($data = mysqli_fetch_object($call[0])) {
-              $today_date = date("d-m-Y H:i:s");
-              $new_date = (strtotime($today_date) - strtotime($data->created_on)) / 86400;
-              $mature_days = round($data->mature);
-              $daysInvested = abs($mature_days - $new_date); ?>
+              if ($data->status === 'approved') {
 
-              <tr>
-                <td>
-                  <?php echo ucwords($data->plan); ?>
-                </td>
-                <td>
-                  $<?php echo $data->amount; ?>
-                </td>
-                <td>
-                  $<?php echo $data->profit; ?>
-                </td>
-                <td>
-                  <?php echo $mature_days . ' Days'; ?>
-                </td>
-                <td><?php echo round(($data->mature) - $new_date); ?> Days</td>
-                <td><?php echo substr($data->created_on, 0, 10); ?></td>
-                <td>
-                  <?php
-                  if ($new_date >= $mature_days) {
-                  ?>
-                    <form method="post" action="" id="myForm">
-                      <input type="hidden" value="<?php echo $data->invest_id; ?>" name="invest_id" />
-                      <input type="hidden" value="<?php echo $data->profit; ?>" name="profit" />
-                      <button type="submit" name="cashout" class="a-link">
-                        CASHOUT
-                      </button>
-                    </form>
+                $today_date = date("d-m-Y H:i:s");
+                $new_date = (strtotime($today_date) - strtotime($data->created_on)) / 86400;
+                $mature_days = round($data->mature);
+                $daysInvested = abs($mature_days - $new_date); ?>
 
-                  <?php } else {
-                    echo "not mature";
-                  }
-                  ?>
-                </td>
-              </tr>
+                <tr>
+                  <td>
+                    <?php echo ucwords($data->plan); ?>
+                  </td>
+                  <td>
+                    $<?php echo $data->amount; ?>
+                  </td>
+                  <td>
+                    $<?php echo $data->profit; ?>
+                  </td>
+                  <td>
+                    <?php echo $mature_days . ' Days'; ?>
+                  </td>
+                  <td><?php
+                      if (round(($data->mature) - $new_date) <= 0) {
+                        echo '0';
+                      } else {
+                        echo round(($data->mature) - $new_date);
+                      }
+                      ?> Days</td>
+                  <td><?php echo substr($data->created_on, 0, 10); ?></td>
+                  <td>
+                    <?php
+                    if ($new_date >= $mature_days) {
+                    ?>
+                      <form method="post" action="" id="myForm">
+                        <input type="hidden" value="<?php echo $data->invest_id; ?>" name="invest_id" />
+                        <input type="hidden" value="<?php echo $data->profit; ?>" name="profit" />
+                        <button type="submit" name="cashout" class="a-link">
+                          CASHOUT
+                        </button>
+                      </form>
+
+                    <?php } else {
+                      echo "not mature";
+                    }
+                    ?>
+                  </td>
+                </tr>
 
           <?php }
+            }
           } else {
             echo '<tr><td colspan="8"><p class="text-align: center">You currently have no approved investment</p></p></tr>';
           }
