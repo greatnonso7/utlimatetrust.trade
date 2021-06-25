@@ -1,8 +1,6 @@
 <?php include('includes/head.php'); ?>
 
 <?php
-include('function/function.php');
-
 $fullname = $username = $email = $cemail = $phone = $country = $password =  $cpassword = "";
 $errors = array('fullname' => '', 'username' => '', 'email' => '', 'cemail' => '', 'phone' => '', 'country' => '', 'password' => '', 'cpassword' => '');
 if (isset($_GET['referral'])) {
@@ -67,7 +65,6 @@ if (isset($_POST['register'])) {
 
 <body>
     <?php include('includes/header.php'); ?>
-    <?php include('includes/ticker.php'); ?>
 
     <div id="main-other">
         <div id="sub-other">
