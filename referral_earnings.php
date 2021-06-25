@@ -12,7 +12,7 @@
     <div id="main-other">
         <div id="sub-other">
             <div class="other-head">
-                <h1>My Referrals</h1>
+                <h1>My Referral Commissions</h1>
             </div>
         </div>
     </div>
@@ -26,27 +26,32 @@
                 <table cellspacing=1 cellpadding=2 border=0 width=100% class="tab">
                     <thead>
                         <tr>
-                            <th>Full Name</th>
-                            <th>Username</th>
-                            <th>Date Registered</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Amount</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $call = getMyReferrals();
-                        if ($call[0] > 0) {;
-                            while ($data = mysqli_fetch_object($call[1])) {
+                        if (isset($_SESSION['user']));
+                        $call = getReferralInvestmentDetails();
+
+                        if ($call[1] > 0) {;
+                            while ($data = mysqli_fetch_object($call[0])) {
                         ?>
                                 <tr>
-                                    <td><?php echo $data->firstname; ?> <?php echo $data->lastname; ?></td>
+                                    <td><?php echo $data->created_on; ?></td>
+                                    <td><?php echo ucwords($data->referred_name); ?></td>
+                                    <td>USD <?php echo $data->ref_bonus; ?></td>
 
-                                    <td><?php echo $data->username; ?></td>
-                                    <td><?php echo substr($data->created_on, 0, 10); ?></td>
                                 </tr>
-                        <?php }
+                        <?php
+
+                            }
                         } else {
-                            echo '<tr><td colspan="8"><p style="text-align: center">You currently have no referral commission yet.</p></td></tr>';
-                        } ?>
+                            echo '<tr><td colspan="7"><p style="text-align: center">You currently have no referral earnings</p></td></tr>';
+                        }
+                        ?>
                     </tbody>
                 </table>
                 <br>

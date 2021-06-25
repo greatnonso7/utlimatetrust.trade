@@ -632,10 +632,33 @@ function requestWithdrawal($a, $b, $c, $d, $e, $f, $g)
 
   $userCount = mysqli_num_rows($findUser);
 
+
   if ($userCount === 1) {
     mysqli_query($connection, "UPDATE users SET wallet = '$g' WHERE email = '$email'") or die(mysqli_error($connection));
-    header('location: withdrawals.php');
+    header('location: dashboard.php');
     exit();
+  }
+}
+
+function getMyReferrals()
+{
+  include('db.php');
+  $email = $_SESSION['user'];
+
+  $find = mysqli_query($connection, "SELECT * FROM users WHERE email='$email'") or die(mysqli_error($connection));
+
+  $find1 = mysqli_num_rows($find);
+
+  $getUserDetails = mysqli_fetch_object($find);
+  $username = $getUserDetails->username;
+
+
+  $getReferral = mysqli_query($connection, "SELECT * FROM users WHERE referral = '$username'") or die(mysqli_error($connection));
+  $getCount = mysqli_num_rows($getReferral);
+
+
+  if ($getCount > 0) {
+    return [$getCount, $getReferral];
   }
 }
 
