@@ -66,9 +66,6 @@
                         <div class="phonef-">
                             <p> <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; support@utlimatetrust.trade</p>
                         </div>
-                        <div class="face">
-                            <a target="_blank" href=#"> <img src="images/joinus.png"></a>
-                        </div>
                     </div>
                 </div>
                 <!--end contact left-->

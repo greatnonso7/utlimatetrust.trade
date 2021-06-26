@@ -232,11 +232,11 @@ select {
   height: auto;
   width: 100%;
   background-color: #c68050;
-  background-image: url(../images/fbg.jpg);
+  /* background-image: url(../images/fbg.jpg); */
   background-repeat: no-repeat;
   background-size: 100% 80px;
   min-width: 1170px;
-  border-top: 2px solid #2f7598;
+  border-top: 2px solid #c68050;
 }
 
 #sub-header {
@@ -1108,7 +1108,7 @@ nav {
 #main-footer {
   height: auto;
   width: 100%;
-  background-image: url(../images/footer.jpg);
+  background-image: url(../images/footernew.jpg);
   background-repeat: no-repeat;
   background-size: 100% 174px;
   min-width: 1170px;
@@ -1142,8 +1142,8 @@ nav {
   float: left;
   margin-left: 20px;
   cursor: pointer;
-  background-color: rgba(1, 87, 137, 0.47);
-  border: 2px solid #07537c;
+  background-color: rgba(198, 128, 80, 0.47);
+  border: 2px solid #c68050;
   border-radius: 5px;
   padding: 8px;
 }
@@ -1222,11 +1222,11 @@ nav {
   height: auto;
   width: 100%;
   background-color: #c68050;
-  background-image: url(../images/fbg.jpg);
+  /* background-image: url(../images/fbg.jpg); */
   background-repeat: no-repeat;
   background-size: 100% 80px;
   min-width: 1170px;
-  border-top: 2px solid #2f7598;
+  border-top: 2px solid #c68050;
 
 }
 
@@ -1268,7 +1268,7 @@ nav {
 #main-other {
   height: auto;
   width: 100%;
-  background-image: url(../images/otherbg.jpg);
+  background-image: url(../images/otherheader.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-width: 1170px;
