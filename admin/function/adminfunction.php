@@ -278,6 +278,8 @@ function getSingleUser()
 
   $find = mysqli_query($connection, "SELECT * FROM users WHERE user_id='$pid'") or die(mysqli_error($connection));
 
+  var_dump($pid);
+
   $find1 = mysqli_num_rows($find);
 
 
@@ -408,6 +410,74 @@ function getSingleWithdrawal()
     return array($find, $find1);
   } else {
   };
+}
+
+function totalDeposit()
+{
+  include('db.php');
+
+  $getAllDeposits = mysqli_query($connection, "SELECT SUM(usd) as sum FROM deposits") or die(mysqli_error($connection));
+
+  $val = mysqli_fetch_array($getAllDeposits);
+
+  $tech_total = $val['sum'];
+
+  if ($tech_total === NULL) {
+    return 0;
+  } else {
+    return $tech_total;
+  }
+}
+
+function totalInvestment()
+{
+  include('db.php');
+
+  $getAllDeposits = mysqli_query($connection, "SELECT SUM(amount) as sum FROM investments") or die(mysqli_error($connection));
+
+  $val = mysqli_fetch_array($getAllDeposits);
+
+  $tech_total = $val['sum'];
+
+  if ($tech_total === NULL) {
+    return 0;
+  } else {
+    return $tech_total;
+  }
+}
+
+function totalTransfers()
+{
+  include('db.php');
+
+  $getAllDeposits = mysqli_query($connection, "SELECT SUM(amount) as sum FROM transfers") or die(mysqli_error($connection));
+
+  $val = mysqli_fetch_array($getAllDeposits);
+
+  $tech_total = $val['sum'];
+
+  if ($tech_total === NULL) {
+    return 0;
+  } else {
+    return $tech_total;
+  }
+}
+
+function totalWithdrawal()
+{
+  include('db.php');
+
+  $getAllDeposits = mysqli_query($connection, "SELECT SUM(amount) as sum FROM withdrawals") or die(mysqli_error($connection));
+
+  $val = mysqli_fetch_array($getAllDeposits);
+
+  $tech_total = $val['sum'];
+
+  if ($tech_total === NULL) {
+    return 0;
+  } else {
+    return $tech_total;
+  }
 }
 
 function setSingleWithdrawal($a, $b, $c, $d, $e, $f)

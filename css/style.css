@@ -614,6 +614,7 @@ nav {
 #main-plan {
   height: auto;
   width: 100%;
+  margin-top: 40px;
   background-color: #ffffff;
   min-width: 1170px;
 }
@@ -634,12 +635,13 @@ nav {
 
 
 .plan-one {
-  height: 330px;
+  height: 300px;
   width: 270px;
-  background-image: url(../images/plana.png);
-  background-repeat: no-repeat;
+  border-radius: 150px;
+  border: 5px solid #c68050;
   overflow: hidden;
   margin-left: 20px;
+  margin-bottom: 20px;
   float: left;
 }
 
@@ -649,12 +651,13 @@ nav {
 }
 
 .plan-two {
-  height: 330px;
+  height: 300px;
   width: 270px;
-  background-image: url(../images/planb.png);
-  background-repeat: no-repeat;
+  border-radius: 150px;
+  border: 5px solid #4b3630;
   overflow: hidden;
   margin-left: 20px;
+  margin-bottom: 20px;
   float: left;
 }
 
@@ -662,7 +665,7 @@ nav {
   height: auto;
   width: 100%;
   text-align: center;
-  padding-top: 109px;
+  padding-top: 50px;
   overflow: hidden;
 }
 
@@ -702,7 +705,7 @@ nav {
 
 .percent- p {
   font-size: 55px;
-  color: #01608d;
+  color: #4b3630;
   font-family: 'Open Sans Condensed';
 }
 
@@ -865,8 +868,9 @@ nav {
 }
 
 #main-choose {
-  background-image: url(../images/choose.jpg);
+  /* background-image: url(../images/choose.jpg); */
   background-size: 100% 100%;
+  background-color: #c68050;
   height: auto;
   width: 100%;
   background-repeat: no-repeat;
@@ -925,7 +929,7 @@ nav {
 .advantage-tittle- p {
   color: #019615;
   font-size: 20px;
-  color: #2ddf3d;
+  color: #fff;
   font-family: 'Open Sans Condensed';
   text-align: left;
 }

@@ -1,8 +1,11 @@
 <?php include('includes/head.php'); ?>
+<?php include("function/adminfunction.php"); ?>
+
 
 <body>
 
-	<?php include('includes/loader.php'); ?>
+	<?php //include('includes/loader.php'); 
+	?>
 
 
 	<!--**********************************
@@ -29,6 +32,12 @@
 					</ol>
 				</div>
 				<!-- row -->
+
+				<?php
+				var_dump($_SESSION['admin']);
+				die;
+
+				?>
 				<div class="row">
 					<div class="col-xl-4">
 						<div class="card">
@@ -155,18 +164,31 @@
 									<div class="custom-tab-1">
 
 										<div id="profile-settings" class="tab-pane">
+											<?php
+											if (isset($_SESSION['success'])) {
+												echo '<div class="sufee-alert alert with-close alert-success alert-dismissible fade show" style="margin:10px>
+                                <span class="badge badge-pill badge-success">Success</span>
+                                        You successfully updated user investment status.
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>';
+											}
+											unset($_SESSION['success']);
+
+											?>
 											<div class="pt-3">
 												<div class="settings-form">
-													<h4 class="text-primary">Account Setting</h4>
+													<h4 class="text-primary" style="margin-bottom: 20px;">Edit User Information</h4>
 													<form>
 														<div class="form-row">
 															<div class="form-group col-md-6">
-																<label>Email</label>
-																<input type="email" placeholder="Email" class="form-control">
+																<label>Full Name</label>
+																<input type="text" class="form-control" name="firstname" value="<?php echo $data->fullname; ?>" placeholder="Full name">
 															</div>
 															<div class="form-group col-md-6">
-																<label>Password</label>
-																<input type="password" placeholder="Password" class="form-control">
+																<label>Username</label>
+																<input type="text" class="form-control" name="lastname" value="<?php echo $data->lastname; ?>" placeholder="First name">
 															</div>
 														</div>
 														<div class="form-group">
@@ -284,6 +306,7 @@
 			thumbnail: true,
 		});
 	</script>
+
 
 
 

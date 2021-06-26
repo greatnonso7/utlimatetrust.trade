@@ -75,9 +75,13 @@
 															<path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
 														</svg>
 													</span>
+
 													<div class="media-body">
 														<p class="mb-1">Deposits</p>
-														<h4 class="mb-0">$3280</h4>
+														<?php
+														$call = totalDeposit(); ?>
+
+														<h4 class="mb-0">$<?php echo $call; ?></h4>
 													</div>
 												</div>
 											</div>
@@ -98,7 +102,10 @@
 													</span>
 													<div class="media-body">
 														<p class="mb-1">Investments</p>
-														<h4 class="mb-0">$2570</h4>
+														<?php
+														$call = totalInvestment(); ?>
+
+														<h4 class="mb-0">$<?php echo $call; ?></h4>
 													</div>
 												</div>
 											</div>
@@ -119,7 +126,10 @@
 													</span>
 													<div class="media-body">
 														<p class="mb-1">Withdrawals</p>
-														<h4 class="mb-0">$364.50</h4>
+														<?php
+														$call = totalWithdrawal(); ?>
+
+														<h4 class="mb-0">$<?php echo $call; ?></h4>
 													</div>
 												</div>
 											</div>
@@ -137,7 +147,10 @@
 													</span>
 													<div class="media-body">
 														<p class="mb-1">Transfers</p>
-														<h4 class="mb-0">364.50K</h4>
+														<?php
+														$call = totalTransfers(); ?>
+
+														<h4 class="mb-0">$<?php echo $call; ?></h4>
 													</div>
 												</div>
 											</div>

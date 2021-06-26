@@ -63,7 +63,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="plan-one fadeInDown animated wow" data-wow-duration="2s" data-wow-delay="0.4s">
+                <div class="plan-two fadeInDown animated wow" data-wow-duration="2s" data-wow-delay="0.4s">
                     <div class="plan-text">
                         <div class="percent">
                             <p>18%</p>
@@ -261,7 +261,7 @@
                     <!--right advantage-->
                     <div class="advantage-one fadeInRight  wow animated" data-wow-duration="2s">
                         <div class="adva-icon-">
-                            <img src="images/pmt.png">
+                            <img src="images/experience.png" width="65px">
                         </div>
                         <div class="advantage-text">
                             <div class="advantage-tittle-">
@@ -275,7 +275,7 @@
                     </div>
                     <div class="advantage-one fadeInRight  wow animated" data-wow-duration="2s">
                         <div class="adva-icon-">
-                            <img src="images/sn.png">
+                            <img src="images/server.png" width="65px">
                         </div>
                         <div class="advantage-text">
                             <div class="advantage-tittle-">
@@ -289,7 +289,7 @@
                     </div>
                     <div class="advantage-one fadeInRight  wow animated" data-wow-duration="2s">
                         <div class="adva-icon-">
-                            <img src="images/ips.png">
+                            <img src="images/transaction.png" width="65px">
                         </div>
                         <div class="advantage-text">
                             <div class="advantage-tittle-">
@@ -303,7 +303,7 @@
                     </div>
                     <div class="advantage-one fadeInRight  wow animated" data-wow-duration="2s">
                         <div class="adva-icon-">
-                            <img src="images/fs.png">
+                            <img src="images/24-hours.png" width="65px">
                         </div>
                         <div class="advantage-text">
                             <div class="advantage-tittle-">
@@ -334,7 +334,7 @@
                 </div>
                 <div class="refer-mid">
                     <div class="hand">
-                        <img src="images/hand.png" />
+                        <img src="images/handshake.png" width="100px" />
                     </div>
                     <div class="level-one">
                         <div class="level-percent">
