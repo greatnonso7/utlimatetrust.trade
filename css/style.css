@@ -1796,7 +1796,8 @@ nav {
 .ahbg {
   height: 230px;
   width: 340px;
-  background-image: url(../images/ah.png);
+  /* background-image: url(../images/ah.png); */
+  background-color: #4b3630;
   background-repeat: no-repeat;
   margin-top: 10px;
   padding: 22px 20px;
@@ -1864,7 +1865,7 @@ nav {
   color: #FFFFFF;
   margin-top: 11px;
   margin-bottom: 0px;
-  background-color: rgba(0, 87, 128, 0.66);
+  background-color: rgba(198, 128, 80, 0.66);
   padding: 6px;
   font-size: 15px;
 }
@@ -1910,7 +1911,8 @@ nav {
 .uibg {
   height: 230px;
   width: 340px;
-  background-image: url(../images/uf.png);
+  /* background-image: url(../images/uf.png); */
+  background-color: #c68050;
   background-repeat: no-repeat;
   margin-top: 10px;
   padding: 22px 20px;
@@ -1939,7 +1941,7 @@ nav {
 
 .duser-text p {
   font-size: 30px;
-  color: #00ee86;
+  color: #4b3630;
   font-family: 'Open Sans Condensed';
 }
 
@@ -2057,7 +2059,7 @@ nav {
   height: auto;
   width: auto;
   font-size: 24px;
-  color: #1dac1c;
+  color: #4b3630;
 }
 
 .balance-tittle {

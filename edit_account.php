@@ -40,34 +40,34 @@
                 </tr>
                 <tr>
                   <td>Your Full Name:</td>
-                  <td><input type=text name=fullname value='<?php echo $data->fullname; ?>' class=inpts size=30>
+                  <td><input type=text name=fullname value='<?php echo $data->fullname; ?>' class=inpts size=30 disabled>
                 </tr>
 
-                <tr>
+                <!-- <tr>
                   <td>New Password:</td>
                   <td><input type=password name=password value="" class=inpts size=30></td>
                 </tr>
                 <tr>
                   <td>Retype Password:</td>
                   <td><input type=password name=password2 value="" class=inpts size=30></td>
-                </tr>
-                <tr>
+                </tr> -->
+                <!-- <tr>
                   <td>Your Bitcoin acc no:</td>
                   <td><input type=text class=inpts size=30 name="pay_account[48]" value="<?php echo $data->bitcoin; ?>"></td>
-                </tr>
-                <tr>
+                </tr> -->
+                <!-- <tr>
                   <td>Your Ethereum acc no:</td>
                   <td><input type=text class=inpts size=30 name="pay_account[69]" value="<?php echo $data->ethereum; ?>"></td>
-                </tr>
+                </tr> -->
                 <tr>
                   <td>Your E-mail address:</td>
-                  <td><input type=text name=email value='<?php echo $data->email; ?>' class=inpts size=30></td>
+                  <td><input type=text name=email value='<?php echo $data->email; ?>' class=inpts size=30 disabled></td>
                 </tr>
 
 
                 <tr>
                   <td>&nbsp;</td>
-                  <td><input type=submit value="Change Account data" class=sbmt></td>
+                  <!-- <td><input type=submit value="Change Account data" class=sbmt></td> -->
                 </tr>
               </table>
             </form>
