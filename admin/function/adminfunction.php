@@ -272,13 +272,12 @@ function getSingleDeposit()
 
 function getSingleUser()
 {
-  include 'includes/db.php';
+  include 'db.php';
 
   $pid = $_GET['pid'];
 
   $find = mysqli_query($connection, "SELECT * FROM users WHERE user_id='$pid'") or die(mysqli_error($connection));
 
-  var_dump($pid);
 
   $find1 = mysqli_num_rows($find);
 
@@ -289,9 +288,9 @@ function getSingleUser()
   };
 }
 
-function setSingleUser($a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l)
+function setSingleUser($a, $b, $c, $d, $e, $f, $g, $h, $i, $j)
 {
-  include 'includes/db.php';
+  include 'db.php';
   $pid = $_GET['pid'];
   $a = mysqli_real_escape_string($connection, $a);
   $b = mysqli_real_escape_string($connection, $b);
@@ -303,10 +302,9 @@ function setSingleUser($a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l)
   $h = mysqli_real_escape_string($connection, $h);
   $i = mysqli_real_escape_string($connection, $i);
   $j = mysqli_real_escape_string($connection, $j);
-  $k = mysqli_real_escape_string($connection, $k);
-  $l = mysqli_real_escape_string($connection, $l);
 
-  $find = mysqli_query($connection, "UPDATE users SET firstname = '$a', lastname = '$b', username = '$c', email = '$d', phone = '$e', referral = '$f', country = '$g', state = '$h', address = '$i', wallet = '$j', total_invest = '$k', total_withdraw = '$l' WHERE user_id = '$pid'") or die(mysqli_error($connection));
+
+  $find = mysqli_query($connection, "UPDATE users SET fullname = '$a', email = '$b', username = '$c', phone = '$d', referral = '$e', country = '$f', wallet = '$g', ref_bonus = '$h', total_invest = '$i', total_withdraw = '$j' WHERE user_id = '$pid'") or die(mysqli_error($connection));
 
 
   if ($find) {

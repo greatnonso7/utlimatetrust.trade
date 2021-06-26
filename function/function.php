@@ -484,7 +484,7 @@ function invest($a, $b, $c, $d, $e, $f, $g)
 
   if ($sql) {
     $_SESSION['MSG'] = "Your Investment was successful";
-    header('location: deposit_list.php');
+    header('location: deposit_history.php');
     exit();
   }
 }

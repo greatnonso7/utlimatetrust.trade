@@ -1,11 +1,30 @@
 <?php include('includes/head.php'); ?>
-<?php include("function/adminfunction.php"); ?>
+<?php include("./function/adminfunction.php"); ?>
+<?php
+
+if (isset($_POST['update'])) {
+	$fullname = $_POST['fullname'];
+	$username = $_POST['username'];
+	$email = $_POST['email'];
+	$phone = $_POST['phone'];
+	$country = $_POST['country'];
+	$referral = $_POST['referral'];
+	$wallet = $_POST['wallet'];
+	$ref_bonus = $_POST['ref_bonus'];
+	$total_invest = $_POST['total_invest'];
+	$total_withdraw = $_POST['total_withdraw'];
+
+
+	if (!empty($fullname) && !empty($username) && !empty($email)) {
+		$call = setSingleUser($fullname, $email, $username, $phone, $referral, $country, $wallet, $ref_bonus, $total_invest, $total_withdraw);
+	}
+}
+?>
 
 
 <body>
 
-	<?php //include('includes/loader.php'); 
-	?>
+	<?php include('includes/loader.php'); ?>
 
 
 	<!--**********************************
@@ -26,275 +45,142 @@
 				<div class="page-titles">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="users.php">All Ultimate Trust Trade Users</a></li>
-						<li class="breadcrumb-item active"><a href="#">Single Ultimate Trust Trade User</a></li>
+						<li class="breadcrumb-item"><a href="withdrawals.php">All Ultimate Trust Trade Withdrawals</a></li>
+						<li class="breadcrumb-item active"><a href="#">Single Ultimate Trust Trade Withdrawal</a></li>
 
 					</ol>
 				</div>
 				<!-- row -->
-
-				<?php
-				var_dump($_SESSION['admin']);
-				die;
-
-				?>
 				<div class="row">
-					<div class="col-xl-4">
-						<div class="card">
-							<div class="card-body">
-								<div class="profile-statistics mb-5">
-									<div class="text-center">
-										<div class="row">
-											<div class="col">
-												<h3 class="m-b-0">150</h3><span>Follower</span>
-											</div>
-											<div class="col">
-												<h3 class="m-b-0">140</h3><span>Place Stay</span>
-											</div>
-											<div class="col">
-												<h3 class="m-b-0">45</h3><span>Reviews</span>
-											</div>
-										</div>
-										<div class="mt-4">
-											<a href="javascript:void()" class="btn btn-primary mb-1 mr-1">Follow</a>
-											<a href="javascript:void()" class="btn btn-primary mb-1" data-toggle="modal" data-target="#sendMessageModal">Send Message</a>
-										</div>
-									</div>
-									<!-- Modal -->
-									<div class="modal fade" id="sendMessageModal">
-										<div class="modal-dialog modal-dialog-centered" role="document">
-											<div class="modal-content">
-												<div class="modal-header">
-													<h5 class="modal-title">Send Message</h5>
-													<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-												</div>
-												<div class="modal-body">
-													<form class="comment-form">
-														<div class="row">
-															<div class="col-lg-6">
-																<div class="form-group">
-																	<label class="text-black font-w600">Name <span class="required">*</span></label>
-																	<input type="text" class="form-control" value="Author" name="Author" placeholder="Author">
-																</div>
-															</div>
-															<div class="col-lg-6">
-																<div class="form-group">
-																	<label class="text-black font-w600">Email <span class="required">*</span></label>
-																	<input type="text" class="form-control" value="Email" placeholder="Email" name="Email">
-																</div>
-															</div>
-															<div class="col-lg-12">
-																<div class="form-group">
-																	<label class="text-black font-w600">Comment</label>
-																	<textarea rows="8" class="form-control" name="comment" placeholder="Comment"></textarea>
-																</div>
-															</div>
-															<div class="col-lg-12">
-																<div class="form-group mb-0">
-																	<input type="submit" value="Post Comment" class="submit btn btn-primary" name="submit">
-																</div>
-															</div>
-														</div>
-													</form>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="profile-blog mb-5">
-									<h5 class="text-primary d-inline">Today Highlights</h5><a href="javascript:void()" class="pull-right f-s-16">More</a>
-									<img src="images/profile/1.jpg" alt="" class="img-fluid mt-4 mb-4 w-100">
-									<h4><a href="post-details.html" class="text-black">Darwin Creative Agency Theme</a></h4>
-									<p class="mb-0">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-								</div>
-								<div class="profile-interest mb-5">
-									<h5 class="text-primary d-inline">Interest</h5>
-									<div class="row mt-4 sp4" id="lightgallery">
-										<a href="images/profile/2.jpg" data-exthumbimage="images/profile/2.jpg" data-src="images/profile/2.jpg" class="mb-1 col-lg-4 col-xl-4 col-sm-4 col-6">
-											<img src="images/profile/2.jpg" alt="" class="img-fluid">
-										</a>
-										<a href="images/profile/3.jpg" data-exthumbimage="images/profile/3.jpg" data-src="images/profile/3.jpg" class="mb-1 col-lg-4 col-xl-4 col-sm-4 col-6">
-											<img src="images/profile/3.jpg" alt="" class="img-fluid">
-										</a>
-										<a href="images/profile/4.jpg" data-exthumbimage="images/profile/4.jpg" data-src="images/profile/4.jpg" class="mb-1 col-lg-4 col-xl-4 col-sm-4 col-6">
-											<img src="images/profile/4.jpg" alt="" class="img-fluid">
-										</a>
-										<a href="images/profile/3.jpg" data-exthumbimage="images/profile/3.jpg" data-src="images/profile/3.jpg" class="mb-1 col-lg-4 col-xl-4 col-sm-4 col-6">
-											<img src="images/profile/3.jpg" alt="" class="img-fluid">
-										</a>
-										<a href="images/profile/4.jpg" data-exthumbimage="images/profile/4.jpg" data-src="images/profile/4.jpg" class="mb-1 col-lg-4 col-xl-4 col-sm-4 col-6">
-											<img src="images/profile/4.jpg" alt="" class="img-fluid">
-										</a>
-										<a href="images/profile/2.jpg" data-exthumbimage="images/profile/2.jpg" data-src="images/profile/2.jpg" class="mb-1 col-lg-4 col-xl-4 col-sm-4 col-6">
-											<img src="images/profile/2.jpg" alt="" class="img-fluid">
-										</a>
-									</div>
-								</div>
-								<div class="profile-news">
-									<h5 class="text-primary d-inline">Our Latest News</h5>
-									<div class="media pt-3 pb-3">
-										<img src="images/profile/5.jpg" alt="image" class="mr-3 rounded" width="75">
-										<div class="media-body">
-											<h5 class="m-b-5"><a href="post-details.html" class="text-black">Collection of textile samples</a></h5>
-											<p class="mb-0">I shared this on my fb wall a few months back, and I thought.</p>
-										</div>
-									</div>
-									<div class="media pt-3 pb-3">
-										<img src="images/profile/6.jpg" alt="image" class="mr-3 rounded" width="75">
-										<div class="media-body">
-											<h5 class="m-b-5"><a href="post-details.html" class="text-black">Collection of textile samples</a></h5>
-											<p class="mb-0">I shared this on my fb wall a few months back, and I thought.</p>
-										</div>
-									</div>
-									<div class="media pt-3 pb-3">
-										<img src="images/profile/7.jpg" alt="image" class="mr-3 rounded" width="75">
-										<div class="media-body">
-											<h5 class="m-b-5"><a href="post-details.html" class="text-black">Collection of textile samples</a></h5>
-											<p class="mb-0">I shared this on my fb wall a few months back, and I thought.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-8">
-						<div class="card">
-							<div class="card-body">
-								<div class="profile-tab">
-									<div class="custom-tab-1">
+					<?php if (isset($_GET['pid'])) {
+						$call = getSingleUser();
+						if ($call[1] >= 1) {;
+							while ($data = mysqli_fetch_object($call[0])) {
 
-										<div id="profile-settings" class="tab-pane">
-											<?php
-											if (isset($_SESSION['success'])) {
-												echo '<div class="sufee-alert alert with-close alert-success alert-dismissible fade show" style="margin:10px>
-                                <span class="badge badge-pill badge-success">Success</span>
-                                        You successfully updated user investment status.
-                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>';
-											}
-											unset($_SESSION['success']);
+					?>
+								<div class="col-xl-4">
+									<div class="card">
+										<div class="card-body">
+											<div class="profile-statistics mb-5">
+												<div class="text-center">
+													<h6 style="text-align:center">Ultimate Trust Investor</h6>
+												</div>
+												<!-- Modal -->
+											</div>
+											<div class="profile-blog mb-5">
+												<h5 class="text-primary d-inline">Name: <?php echo $data->fullname; ?></h5>
 
-											?>
-											<div class="pt-3">
-												<div class="settings-form">
-													<h4 class="text-primary" style="margin-bottom: 20px;">Edit User Information</h4>
-													<form>
-														<div class="form-row">
-															<div class="form-group col-md-6">
-																<label>Full Name</label>
-																<input type="text" class="form-control" name="firstname" value="<?php echo $data->fullname; ?>" placeholder="Full name">
-															</div>
-															<div class="form-group col-md-6">
-																<label>Username</label>
-																<input type="text" class="form-control" name="lastname" value="<?php echo $data->lastname; ?>" placeholder="First name">
+												<h5 class="text-primary d-inline">Email: <?php echo $data->email; ?></h5>
+
+												<h5 class="text-primary d-inline">username: <?php echo $data->username; ?></h5> <br>
+
+
+												<h5 class="text-primary d-inline">Wallet Balance: $<?php echo $data->wallet; ?></h5>
+
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-8">
+									<div class="card">
+										<?php
+										if (isset($_SESSION['success'])) {
+											echo '<div class="sufee-alert alert with-close alert-success alert-dismissible fade show" style="margin:10px>
+                        <span class="badge badge-pill badge-success">Success</span>
+                                You successfully updated user investment status.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>';
+										}
+										unset($_SESSION['success']);
+
+										?>
+										<div class="card-body">
+											<div class="profile-tab">
+												<div class="custom-tab-1">
+
+													<div id="profile-settings" class="tab-pane">
+														<div class="pt-3">
+															<div class="settings-form">
+																<h4 class="text-primary">Edit User Information</h4>
+																<form method="post">
+																	<div class="form-row">
+																		<div class="form-group col-md-6 mt-5">
+																			<label>Full Name</label>
+																			<input type="text" class="form-control" id="exampleInputEmail111" name="fullname" value="<?php echo $data->fullname; ?>" placeholder="First name">
+																		</div>
+																		<div class="form-group col-md-6  mt-5">
+																			<label>Email</label>
+																			<input type="email" value="<?php echo $data->email; ?>" placeholder="Email" class="form-control" name="email">
+																		</div>
+
+																		<div class="form-group col-md-6">
+																			<label>Phone Number</label>
+																			<input type="tel" name="phone" value="<?php echo $data->phone ?>" placeholder="Phone " class="form-control">
+																		</div>
+																		<div class="form-group col-md-6">
+																			<label>Username</label>
+																			<input type="text" value="<?php echo $data->username; ?>" name="username" placeholder="Username" class="form-control">
+																		</div>
+																		<div class="form-group col-md-6">
+																			<label>Referral</label>
+																			<input type="text" name="referral" value="<?php echo $data->referral; ?>" placeholder="Referral" class="form-control">
+																		</div>
+																		<div class="form-group col-md-6">
+																			<label>Country</label>
+																			<input type="text" name="country" value="<?php echo $data->country; ?>" placeholder="Country" class="form-control">
+																		</div>
+																		<div class="form-group col-md-6">
+																			<label>Wallet Balance</label>
+																			<input type="text" name="wallet" value="<?php echo $data->wallet; ?>" placeholder="Email" class="form-control">
+																		</div>
+
+																		<div class="form-group col-md-6">
+																			<label>Referral Bonus</label>
+																			<input type="text" name="ref_bonus" value="<?php echo $data->ref_bonus; ?>" placeholder="Referral Bonus" class="form-control">
+																		</div>
+																		<div class="form-group col-md-6">
+																			<label>Total Investment</label>
+																			<input type="text" name="total_invest" value="<?php echo $data->total_invest; ?>" placeholder="Total Invest" class="form-control">
+																		</div>
+																		<div class="form-group col-md-6">
+																			<label>Total Withdrawal</label>
+																			<input type="text" name="total_withdraw" value="<?php echo $data->total_withdraw; ?>" placeholder="Total Withdrawal" class="form-control">
+																		</div>
+																	</div>
+
+																	<button class="btn btn-primary btn-lg" name="update" type="submit">
+																		<i class="fa fa-credit-card"></i>&nbsp;
+																		Edit User Profile
+																	</button>
+																</form>
 															</div>
 														</div>
-														<div class="form-group">
-															<label>Address</label>
-															<input type="text" placeholder="1234 Main St" class="form-control">
-														</div>
-														<div class="form-group">
-															<label>Address 2</label>
-															<input type="text" placeholder="Apartment, studio, or floor" class="form-control">
-														</div>
-														<div class="form-row">
-															<div class="form-group col-md-6">
-																<label>City</label>
-																<input type="text" class="form-control">
-															</div>
-															<div class="form-group col-md-4">
-																<label>State</label>
-																<select class="form-control default-select" id="inputState">
-																	<option selected="">Choose...</option>
-																	<option>Option 1</option>
-																	<option>Option 2</option>
-																	<option>Option 3</option>
-																</select>
-															</div>
-															<div class="form-group col-md-2">
-																<label>Zip</label>
-																<input type="text" class="form-control">
-															</div>
-														</div>
-														<div class="form-group">
-															<div class="custom-control custom-checkbox">
-																<input type="checkbox" class="custom-control-input" id="gridCheck">
-																<label class="custom-control-label" for="gridCheck"> Check me out</label>
-															</div>
-														</div>
-														<button class="btn btn-primary" type="submit">Sign
-															in</button>
-													</form>
+													</div>
 												</div>
 											</div>
+											<!-- Modal -->
 										</div>
+							<?php
+							}
+						}
+					} ?>
 									</div>
 								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="replyModal">
-									<div class="modal-dialog modal-dialog-centered" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title">Post Reply</h5>
-												<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-											</div>
-											<div class="modal-body">
-												<form>
-													<textarea class="form-control" rows="4">Message</textarea>
-												</form>
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-danger light" data-dismiss="modal">Close</button>
-												<button type="button" class="btn btn-primary">Reply</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!--**********************************
-            Content body end
-        ***********************************-->
 
-
-	<!--**********************************
-            Footer start
-        ***********************************-->
 	<div class="footer">
 		<div class="copyright">
 			<p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2020</p>
 		</div>
 	</div>
-	<!--**********************************
-            Footer end
-        ***********************************-->
-
-	<!--**********************************
-           Support ticket button start
-        ***********************************-->
-
-	<!--**********************************
-           Support ticket button end
-        ***********************************-->
-
-
 	</div>
-	<!--**********************************
-        Main wrapper end
-    ***********************************-->
 
-	<!--removeIf(production)-->
-
-	<!--**********************************
-        Scripts
-    ***********************************-->
 	<!-- Required vendors -->
 	<script src="vendor/global/global.min.js"></script>
 	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
@@ -306,7 +192,6 @@
 			thumbnail: true,
 		});
 	</script>
-
 
 
 

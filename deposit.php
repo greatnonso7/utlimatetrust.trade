@@ -96,7 +96,7 @@
         }
 
         if ($amount > $wallet) {
-          $errors['amount'] = "Amount is greater than wallet value";
+          $errors['investment'] = "Amount is greater than wallet value";
         }
 
 
@@ -122,12 +122,7 @@
           <div class="desh-right">
 
             <br>
-            <?php
-            if (!empty($errors)) {
-              echo $errors['investment'];
-            }
 
-            ?>
             <form method=post>
 
               <input type=hidden name=a value=deposit>
@@ -311,6 +306,7 @@
                   <td>Amount to Spend ($):</td>
                   <td align=right>
                     <input type=text name="amount" value='<?php echo $amount; ?>' class=inpts size=15 style="text-align:right;">
+                    <span style="color:red"><?php echo $errors['investment']; ?></span>
                   </td>
                 </tr>
                 <tr id="coumpond_block" style="display:none">
