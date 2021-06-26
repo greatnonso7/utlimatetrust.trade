@@ -69,7 +69,7 @@
 
   ?>
   <div class="logo">
-    <a href="index.php"><img src="images/logo.png" alt="logo" width="258" height="60"></a>
+    <a href="index.php"><img src="images/cargoxpress.png" alt="logo" width="258" height="60"></a>
   </div>
   <div class="menu">
     <nav id="nav-1">

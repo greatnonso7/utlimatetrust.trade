@@ -1733,18 +1733,18 @@ nav {
 }
 
 .desh-menu ul li:hover {
-  background-color: #094c72;
+  background-color: #4b3630;
   border-radius: 5px;
 }
 
 .desh-menu ul li a i {
   font-size: 20px;
   padding: 15px 0px;
-  border-right: 1px solid#096f9f;
+  border-right: 1px solid#4b3630;
   margin-right: 12px;
   width: 53px;
   text-align: center;
-  background-color: #03628e;
+  background-color: #4b3630;
 }
 
 

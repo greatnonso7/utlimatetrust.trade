@@ -147,14 +147,14 @@
                   <th class=inheader>
                     <nobr> Profit (%)</nobr>
                   </th>
-                  <th class=inheader>Referral Bonus ($)</th>
+                  <th class=inheader>Referral Bonus (%)</th>
                 </tr>
                 <tr>
                   <td class=item>Basic Plan</td>
                   <td class=item align=right>$100 - $50,000</td>
                   <td class=item align=right>24 Hours</td>
                   <td class=item align=right>7</td>
-                  <td class=item align=right>$10</td>
+                  <td class=item align=right>10</td>
                 </tr>
               </table><br><br>
               <table cellspacing=1 cellpadding=2 border=0 width=100% class="tab">
@@ -171,14 +171,14 @@
                   <th class=inheader>
                     <nobr> Profit (%)</nobr>
                   </th>
-                  <th class=inheader>Referral Bonus ($)</th>
+                  <th class=inheader>Referral Bonus (%)</th>
                 </tr>
                 <tr>
                   <td class=item>Amateur Plan</td>
                   <td class=item align=right>$200 - $50,000</td>
                   <td class=item align=right>48 Hours</td>
                   <td class=item align=right>18</td>
-                  <td class=item align=right>$10</td>
+                  <td class=item align=right>10</td>
 
 
                 </tr>
@@ -197,14 +197,14 @@
                   <th class=inheader>
                     <nobr> Profit (%)</nobr>
                   </th>
-                  <th class=inheader>Referral Bonus ($)</th>
+                  <th class=inheader>Referral Bonus (%)</th>
                 </tr>
                 <tr>
                   <td class=item>Professional Plan</td>
                   <td class=item align=right>$500 - $50,000</td>
                   <td class=item align=right>3 Days</td>
                   <td class=item align=right>28</td>
-                  <td class=item align=right>$10</td>
+                  <td class=item align=right>10</td>
 
 
                 </tr>
@@ -223,14 +223,14 @@
                   <th class=inheader>
                     <nobr> Profit (%)</nobr>
                   </th>
-                  <th class=inheader>Referral Bonus ($)</th>
+                  <th class=inheader>Referral Bonus (%)</th>
                 </tr>
                 <tr>
                   <td class=item>Silver Plan</td>
                   <td class=item align=right>$1,500 - $50,000</td>
                   <td class=item align=right>5 Days</td>
                   <td class=item align=right>40</td>
-                  <td class=item align=right>$10</td>
+                  <td class=item align=right>10</td>
 
 
                 </tr>
@@ -249,14 +249,14 @@
                   <th class=inheader>
                     <nobr> Profit (%)</nobr>
                   </th>
-                  <th class=inheader>Referral Bonus ($)</th>
+                  <th class=inheader>Referral Bonus (%)</th>
                 </tr>
                 <tr>
                   <td class=item>Gold Plan</td>
                   <td class=item align=right>$5,000 - $50,000</td>
                   <td class=item align=right>7 Days</td>
                   <td class=item align=right>55</td>
-                  <td class=item align=right>$10</td>
+                  <td class=item align=right>10</td>
 
 
                 </tr>
@@ -275,14 +275,14 @@
                   <th class=inheader>
                     <nobr> Profit (%)</nobr>
                   </th>
-                  <th class=inheader>Referral Bonus ($)</th>
+                  <th class=inheader>Referral Bonus (%)</th>
                 </tr>
                 <tr>
                   <td class=item>Ultimate Plan</td>
                   <td class=item align=right>$10,000 - Unlimited</td>
                   <td class=item align=right>7 Days</td>
                   <td class=item align=right>70</td>
-                  <td class=item align=right>$10</td>
+                  <td class=item align=right>10</td>
 
 
                 </tr>
