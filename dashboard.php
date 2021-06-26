@@ -159,7 +159,7 @@
                         </div>
                         <div class="main-referbg">
                             <p>
-                                Your Referral Link : https://utlimatetrust.trade/register.php?referral=<?php echo $data->username; ?>
+                                Your Referral Link : https://ultimatetrust.trade/register.php?referral=<?php echo $data->username; ?>
                             </p>
                         </div>
 
@@ -168,7 +168,9 @@
         </div>
     </div>
 
+
+
+    <?php include('includes/footer.php'); ?>
+
 <?php }
             } ?>
-
-<?php include('includes/footer.php'); ?>

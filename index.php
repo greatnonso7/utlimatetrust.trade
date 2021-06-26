@@ -11,10 +11,10 @@
 
         <div id="sub-slider">
             <div class="slid-text fadeInLeft animated wow">
-                <h1>WE LISTEN,<span>YOU PROSPER </span>TODAY,<samp><br />TOMORROW,TOGETHER!</samp></h1>
+                <h1>WE LISTEN, YOU PROSPER TODAY,<samp><br />TOMORROW,TOGETHER!</samp></h1>
             </div>
             <div class="tittle">
-                <p>Choose Your Plan & Make Your Deposit</p>
+                <p style="color: white">Choose Your Plan & Make Your Deposit</p>
             </div>
             <div class="reg-login">
                 <div class="reg-now flipInX  wow animated" data-wow-duration="2s">
@@ -27,7 +27,7 @@
         </div>
     </div>
     <!--end slider-->
-    <div id="main-details">
+    <!-- <div id="main-details">
         <div id="sub-details">
             <div class="view">
                 <img src="images/cm.png" height="67">
@@ -39,7 +39,7 @@
                 <a href="https://beta.companieshouse.gov.uk/company/10252728" target="_blank" class="a-link">CHECK Certificate</a>
             </div>
         </div>
-    </div>
+    </div> -->
     <div id="main-plan">
         <!--start plan-->
         <div id="sub-plan">
@@ -50,27 +50,29 @@
                             <p>7%</p>
                         </div>
                         <div class="daily">
+                            <p style="font-size: 17px">BASIC</p>
                             <p>After 24 Hours</p>
                         </div>
                         <div class="plan-border">
                         </div>
                         <div class="da">
-                            <p>Min $100 - Max $10,000</p>
+                            <p>Min $100 - Max $50,000</p>
                         </div>
                         <div class="return">
                             <p>Principal Include</p>
                         </div>
                     </div>
                 </div>
-                <div class="plan-two fadeInDown animated wow" data-wow-duration="2s" data-wow-delay="0.6s">
+                <div class="plan-one fadeInDown animated wow" data-wow-duration="2s" data-wow-delay="0.4s">
                     <div class="plan-text">
-                        <div class="percent-">
+                        <div class="percent">
                             <p>18%</p>
                         </div>
                         <div class="daily">
+                            <p style="font-size: 17px">AMATEUR</p>
                             <p>After 48 Hours</p>
                         </div>
-                        <div class="plan-border-">
+                        <div class="plan-border">
                         </div>
                         <div class="da">
                             <p>Min $200 - Max $50,000</p>
@@ -80,18 +82,60 @@
                         </div>
                     </div>
                 </div>
-                <div class="plan-one fadeInDown animated wow" data-wow-duration="2s" data-wow-delay="0.8s">
+                <div class="plan-one fadeInDown animated wow" data-wow-duration="2s" data-wow-delay="0.4s">
                     <div class="plan-text">
                         <div class="percent">
                             <p>28%</p>
                         </div>
                         <div class="daily">
-                            <p>After 3 Days </p>
+                            <p style="font-size: 17px">PROFESSIONAL</p>
+
+                            <p>After 3 Days</p>
                         </div>
                         <div class="plan-border">
                         </div>
                         <div class="da">
                             <p>Min $500 - Max $50,000</p>
+                        </div>
+                        <div class="return">
+                            <p>Principal Include</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-two fadeInDown animated wow" data-wow-duration="2s" data-wow-delay="0.6s">
+                    <div class="plan-text">
+                        <div class="percent-">
+                            <p>40%</p>
+                        </div>
+                        <div class="daily">
+                            <p style="font-size: 17px">SILVER</p>
+
+                            <p>After 5 Days</p>
+                        </div>
+                        <div class="plan-border-">
+                        </div>
+                        <div class="da">
+                            <p>Min $1,500 - Max $50,000</p>
+                        </div>
+                        <div class="return">
+                            <p>Principal Include</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-one fadeInDown animated wow" data-wow-duration="2s" data-wow-delay="0.8s">
+                    <div class="plan-text">
+                        <div class="percent">
+                            <p>55%</p>
+                        </div>
+                        <div class="daily">
+                            <p style="font-size: 17px">GOLD</p>
+
+                            <p>After 7 Days </p>
+                        </div>
+                        <div class="plan-border">
+                        </div>
+                        <div class="da">
+                            <p>Min $5,000 - Max $50,000</p>
                         </div>
                         <div class="return">
                             <p>Principal Include</p>
@@ -104,12 +148,14 @@
                             <p>70%</p>
                         </div>
                         <div class="daily">
+                            <p style="font-size: 17px">ULTIMATE</p>
+
                             <p>After 7 Days</p>
                         </div>
                         <div class="plan-border-">
                         </div>
                         <div class="da">
-                            <p>Min $1500 - Max $50,000</p>
+                            <p>Min $10,000 - Max $Unlimited</p>
                         </div>
                         <div class="return">
                             <p>Principal Include</p>

@@ -2,7 +2,6 @@
 
 <body>
     <?php include('includes/header.php'); ?>
-    <?php include('includes/ticker.php'); ?>
 
     <div id="main-other">
         <div id="sub-other">
